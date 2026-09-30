@@ -3,17 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="GSl7Fg1l46E4NHWWklQknVQmZKZMV3uYQGzChNX8">
-
-    <title>Muhammad Aiman Hakim — Software Engineer</title>
-    <meta name="description" content="Portfolio of Muhammad Aiman Hakim — Laravel developer building scalable web applications and backend systems.">
-
+    <meta name="csrf-token" content="8TAeP9jNLY0CshUJYpXT3K3a1GLnnEbz5u731oFL">
+    <title>Mohamad Amirul Helmi — Software Engineer</title>
+    <meta name="description" content="Portfolio of Mohamad Amirul Helmi — Software Engineer, web developer and Computer Science graduate.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:400,500,600|sora:600,700,800&display=swap" rel="stylesheet">
-
-    <link rel="preload" as="style" href="http://portfolio.test/build/assets/app-aqML-tnW.css" /><link rel="modulepreload" as="script" href="http://portfolio.test/build/assets/app-CFUKOGa1.js" /><link rel="stylesheet" href="http://portfolio.test/build/assets/app-aqML-tnW.css" /><script type="module" src="http://portfolio.test/build/assets/app-CFUKOGa1.js"></script><script id="browser-logger-active">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|space-grotesk:400,500,600,700|jetbrains-mono:400,500,600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="/build/assets/app-EOyt6QWm.css" /><link rel="modulepreload" as="script" href="/build/assets/app-C332j3Re.js" /><link rel="stylesheet" href="/build/assets/app-EOyt6QWm.css" /><script type="module" src="/build/assets/app-C332j3Re.js"></script><script id="browser-logger-active">
 (function() {
-    const ENDPOINT = 'http://portfolio.test/_boost/browser-logs';
+    const ENDPOINT = '/_boost/browser-logs';
     const logQueue = [];
     let flushTimeout = null;
     const captureTypes = ["error","warning","info","log","debug","table"];
@@ -226,1074 +224,407 @@
 })();
 </script>
 </head>
-<body class="bg-background text-foreground">
-    <div id="spotlight" aria-hidden="true" class="pointer-events-none fixed inset-0 z-30 hidden md:block"></div>
-
-        <header
-    x-data="{ scrolled: false, open: false }"
-    x-init="scrolled = window.scrollY > 24"
-    @scroll.window="scrolled = window.scrollY > 24"
-    :class="scrolled ? 'border-b border-border bg-background/70 backdrop-blur-xl' : ''"
-    class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
->
-    <nav class="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:flex lg:justify-between">
-        <a href="#home" class="min-w-0 truncate font-display text-lg font-bold">
-            aiman<span class="text-primary">.</span>hakim
-        </a>
-
-        <ul class="hidden items-center gap-7 text-sm text-muted-foreground lg:flex">
-                            <li>
-                    <a href="#home" class="transition-colors hover:text-primary">Home</a>
-                </li>
-                            <li>
-                    <a href="#about" class="transition-colors hover:text-primary">About</a>
-                </li>
-                            <li>
-                    <a href="#skills" class="transition-colors hover:text-primary">Skills</a>
-                </li>
-                            <li>
-                    <a href="#experience" class="transition-colors hover:text-primary">Experience</a>
-                </li>
-                            <li>
-                    <a href="#projects" class="transition-colors hover:text-primary">Projects</a>
-                </li>
-                            <li>
-                    <a href="#services" class="transition-colors hover:text-primary">Services</a>
-                </li>
-                            <li>
-                    <a href="#contact" class="transition-colors hover:text-primary">Contact</a>
-                </li>
-                    </ul>
-
-        <div class="flex shrink-0 items-center gap-2">
-            <a
-                href="http://portfolio.test/resume.pdf"
-                download="Muhammad_Aiman_Hakim_Resume.pdf"
-                target="_blank"
-                class="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105 sm:inline-flex"
-            >
-                <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Resume
-            </a>
-            <button
-                type="button"
-                aria-label="Toggle navigation"
-                @click="open = !open"
-                class="rounded-full border border-border p-2.5 lg:hidden"
-            >
-                <svg x-show="!open" class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <svg x-show="open" x-cloak class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
+<body>
+    <div class="site-grid pointer-events-none fixed inset-0 z-[-1] opacity-70"></div>
+    <div class="pointer-events-none fixed left-1/2 top-0 z-[-1] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]"></div>
+        <header x-data="{scrolled:false,open:false}" @scroll.window="scrolled=window.scrollY>24" :class="scrolled ? 'border-b border-border bg-background/85 backdrop-blur-2xl shadow-[0_10px_40px_-30px_rgba(0,0,0,.8)]' : ''" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#home" class="group flex items-center gap-3"><span class="grid size-10 place-items-center rounded-xl border border-primary/25 bg-primary/[.04] p-1.5 shadow-[0_0_28px_-12px_rgba(155,124,255,.9)]"><img src="/images/logo-mark.svg" alt="Amieyrul logo" class="size-full"></span><span class="hidden font-display text-sm font-semibold tracking-tight sm:block">Amieyrul<span class="text-primary">.</span></span></a>
+        <div class="hidden items-center gap-7 lg:flex"><a href="#about" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">About</a><a href="#skills" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Stack</a><a href="#experience" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Experience</a><a href="#projects" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Projects</a><a href="#contact" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Contact</a></div>
+        <div class="flex items-center gap-2"><a href="/resume.pdf" target="_blank" class="hidden rounded-lg border border-border px-4 py-2 text-xs font-semibold transition hover:border-primary/40 hover:text-primary sm:inline-flex">Resume </a><a href="#contact" class="hidden rounded-lg bg-primary px-4 py-2 text-xs font-bold text-primary-foreground sm:inline-flex">Let's Talk</a><button @click="open=!open" class="rounded-lg border border-border p-2 lg:hidden" aria-label="Toggle menu"><svg x-show="!open" class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg><svg x-show="open" x-cloak class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     </nav>
-
-    <ul
-        x-show="open"
-        x-cloak
-        class="border-t border-border bg-background/95 px-5 py-4 backdrop-blur-xl lg:hidden"
-    >
-                    <li>
-                <a
-                    href="#home"
-                    @click="open = false"
-                    class="block py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                    Home
-                </a>
-            </li>
-                    <li>
-                <a
-                    href="#about"
-                    @click="open = false"
-                    class="block py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                    About
-                </a>
-            </li>
-                    <li>
-                <a
-                    href="#skills"
-                    @click="open = false"
-                    class="block py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                    Skills
-                </a>
-            </li>
-                    <li>
-                <a
-                    href="#experience"
-                    @click="open = false"
-                    class="block py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                    Experience
-                </a>
-            </li>
-                    <li>
-                <a
-                    href="#projects"
-                    @click="open = false"
-                    class="block py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                    Projects
-                </a>
-            </li>
-                    <li>
-                <a
-                    href="#services"
-                    @click="open = false"
-                    class="block py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                    Services
-                </a>
-            </li>
-                    <li>
-                <a
-                    href="#contact"
-                    @click="open = false"
-                    class="block py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                    Contact
-                </a>
-            </li>
-                <li class="mt-3 pt-3 border-t border-border">
-            <a
-                href="http://portfolio.test/resume.pdf"
-                download="Muhammad_Aiman_Hakim_Resume.pdf"
-                target="_blank"
-                @click="open = false"
-                class="flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
-            >
-                <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Download Resume
-            </a>
-        </li>
-    </ul>
+    <div x-show="open" x-cloak class="border-t border-border bg-background/95 px-5 py-4 backdrop-blur-2xl lg:hidden"><div class="mx-auto flex max-w-7xl flex-col gap-1"><a href="#about" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">About</a><a href="#skills" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Stack</a><a href="#experience" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Experience</a><a href="#projects" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Projects</a><a href="#contact" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Contact</a><a href="/resume.pdf" target="_blank" class="mt-2 rounded-lg bg-primary px-3 py-3 text-center text-sm font-bold text-primary-foreground">View Resume</a></div></div>
 </header>
-
     <main>
-        <section id="home" class="relative overflow-hidden pb-24 pt-36 md:pb-32 md:pt-44">
-    <div id="particles-container" aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden"></div>
+        <section id="home" class="relative overflow-hidden pt-28 sm:pt-32">
+    <div class="absolute inset-x-0 top-0 mx-auto h-[42rem] max-w-7xl bg-[radial-gradient(circle_at_55%_12%,rgba(124,92,255,.20),transparent_48%)]"></div>
+    <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 pb-20 pt-8 lg:grid-cols-[1.12fr_.88fr] lg:px-8 lg:pb-28 lg:pt-14">
+        <div class="relative z-10">
+            <div class="eyebrow"><span class="size-1.5 animate-pulse rounded-full bg-accent"></span> Software Engineer · Ipoh, Perak</div>
+            <div class="mt-7 flex items-center gap-3 text-xs text-muted-foreground">
+                <span class="font-mono text-primary">01</span><span>Currently building</span>
+                <span id="typing-text" class="font-semibold text-foreground" data-words='["Software Engineer","Laravel Developer","Web Developer","Python Developer"]'></span><span class="h-4 w-px animate-caret-blink bg-primary"></span>
+            </div>
+            <h1 class="mt-5 max-w-4xl font-display text-[3.35rem] font-bold leading-[.93] tracking-[-.06em] sm:text-7xl lg:text-[5.8rem]">Building <span class="text-gradient">systems</span><br>in the <span class="text-gradient">real world.</span></h1>
+            <p class="mt-7 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">I'm <strong class="text-foreground">Mohamad Amirul Helmi</strong>, a Computer Science graduate and Software Engineer focused on web systems, application development, databases, automation and practical problem solving.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#projects" class="btn-primary" data-magnetic>Explore my work <span></span></a>
+                <a href="/resume.pdf" target="_blank" class="btn-secondary">View Resume <span></span></a>
+            </div>
+            <div class="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
+                <div class="metric-card"><span class="number">01</span><strong>Laravel</strong><span>Primary stack</span></div>
+                <div class="metric-card"><span class="number">02</span><strong>Python</strong><span>Programming</span></div>
+                <div class="metric-card"><span class="number">03</span><strong>MySQL</strong><span>Data</span></div>
+                <div class="metric-card"><span class="number">04</span><strong>Flutter</strong><span>Mobile</span></div>
+            </div>
+        </div>
 
-    <div aria-hidden="true" class="pointer-events-none absolute -left-40 top-10 size-[28rem] rounded-full bg-primary/15 blur-[130px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-32 bottom-0 size-[24rem] rounded-full bg-primary/10 blur-[130px]"></div>
-
-    <div class="relative mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.05fr_0.95fr]">
+        <div class="relative mx-auto w-full max-w-[31rem] lg:max-w-none">
+            <div class="absolute -inset-10 rounded-full bg-primary/10 blur-3xl"></div>
+            <div class="profile-shell relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#090b14]/95 p-2 shadow-violet" data-tilt>
+                <div class="relative overflow-hidden rounded-[1.55rem] border border-white/[.07] bg-[#0b0d17]">
+                    <div class="flex items-center justify-between border-b border-white/[.07] px-4 py-3">
+                        <div class="flex gap-1.5"><span class="size-2.5 rounded-full bg-white/20"></span><span class="size-2.5 rounded-full bg-white/20"></span><span class="size-2.5 rounded-full bg-white/20"></span></div>
+                        <span class="font-mono text-[9px] uppercase tracking-[.2em] text-white/30">profile.preview</span>
+                    </div>
+                    <div class="relative aspect-[4/5] overflow-hidden">
+                                                    <img src="/images/profile.jpg" alt="Mohamad Amirul Helmi" class="absolute inset-0 h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#080a11] via-transparent to-[#080a11]/10"></div>
+                                                <div class="absolute inset-x-5 bottom-5">
+                            <div class="rounded-2xl border border-white/10 bg-black/45 p-4 backdrop-blur-xl">
+                                <div class="flex items-end justify-between gap-4">
+                                    <div><p class="font-mono text-[9px] uppercase tracking-[.2em] text-primary">Software Engineer</p><p class="mt-1 font-display text-xl font-bold">Mohamad Amirul Helmi</p><p class="mt-1 text-xs text-white/55">Netcentric Computing · UiTM Arau</p></div>
+                                    <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-accent/20 bg-accent/10 font-mono text-xs font-bold text-accent">'26</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -right-3 -top-5 hidden animate-float-slow rounded-2xl border border-accent/20 bg-[#17130d]/90 px-4 py-3 backdrop-blur-xl sm:block">
+                <p class="font-mono text-[9px] uppercase tracking-widest text-accent">Open to</p><p class="mt-1 text-sm font-bold">Software Opportunities</p>
+            </div>
+            <div class="absolute -bottom-5 -left-4 hidden rounded-2xl border border-primary/20 bg-[#0d0b19]/90 px-4 py-3 shadow-violet backdrop-blur-xl sm:block">
+                <p class="font-mono text-[9px] uppercase tracking-widest text-primary">Focus</p><p class="mt-1 text-sm font-bold">Web · Systems · Automation</p>
+            </div>
+        </div>
+    </div>
+    <div class="border-y border-border bg-white/[.012] py-4 overflow-hidden">
+        <div class="flex min-w-max animate-marquee gap-10 whitespace-nowrap text-[11px] font-mono uppercase tracking-[.22em] text-muted-foreground/60">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Arduino</span>
+                            <span>C++</span>
+                            <span>Java</span>
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Arduino</span>
+                            <span>C++</span>
+                            <span>Java</span>
+                    </div>
+    </div>
+</section>
+        <section id="about" class="mx-auto max-w-7xl scroll-mt-24 px-5 py-24 lg:px-8 lg:py-32">
+    <div class="grid gap-12 lg:grid-cols-[.72fr_1.28fr]">
         <div>
-            <p class="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 font-mono text-xs uppercase tracking-[0.25em] text-primary">
-                <span class="size-1.5 rounded-full bg-primary"></span>
-                Available for work
-            </p>
-
-            <h1 class="mt-7 font-display text-[clamp(2.9rem,10vw,5.5rem)] font-extrabold leading-[0.95]">
-                                    <span class="block">Software</span>
-                                    <span class="block text-outline">Engineering &amp;</span>
-                                    <span class="block">Web Systems</span>
-                            </h1>
-
-            <p class="mt-6 font-display text-lg font-semibold sm:text-xl">
-                <span id="typing-text" class="text-primary" data-words='["Software Engineer","Laravel \u0026 Web Developer","Full Stack Developer","System Architect"]'></span>
-                <span class="ml-0.5 inline-block w-0.5 translate-y-0.5 bg-primary animate-caret-blink" style="height: 1em;"></span>
-            </p>
-
-            <p class="mt-5 max-w-xl leading-relaxed text-muted-foreground">
-                Software Engineer with experience in developing and maintaining enterprise web applications using Laravel, PHP, JavaScript, MySQL, and PostgreSQL.
-            </p>
-
-            <div class="mt-9 flex flex-wrap gap-4">
-                <div data-magnetic class="inline-block transition-transform duration-200">
-                    <a href="#projects" class="btn-primary">
-                        View Projects
-                        <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-                <div data-magnetic class="inline-block transition-transform duration-200">
-                    <a href="#contact" class="btn-outline">
-                        <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        Contact Me
-                    </a>
-                </div>
-            </div>
+            <span class="eyebrow">01 / About</span>
+            <h2 class="section-title mt-5">Engineer mindset.<br><span class="text-gradient">Product thinking.</span></h2>
+            <div class="mt-7 line max-w-xs"></div>
         </div>
-
-        <div class="relative mx-auto w-full max-w-md">
-            <div class="gradient-border overflow-hidden rounded-[2rem]">
-                <img
-                    src="http://portfolio.test/storage/hero/pQajC0UjArWptSQngdcUBksJLuHNAwuYeehIOSx0.jpg"
-                    alt="Portrait of Muhammad Aiman Hakim, software engineer"
-                    width="1024"
-                    height="1280"
-                    class="h-full w-full object-cover aspect-[4/5]"
-                    onerror="this.src='http://portfolio.test/images/profile.jpg'"
-                >
-            </div>
-        </div>
-    </div>
-</section>
-        <section id="about" class="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-24 md:py-32">
-    <div class="mx-auto max-w-2xl text-center">
-    <p class="font-mono text-xs uppercase tracking-[0.3em] text-primary">About</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">A little about me</h2>
-    </div>
-
-    <div class="mt-14 grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-        <div class="mx-auto w-full max-w-sm">
-            <div class="glow-ring overflow-hidden rounded-[2rem]">
-                <img
-                    src="http://portfolio.test/storage/about/cRNqmy7rgdeBrSD7ErGQRID0BsgY0ioSCa4S4xjw.jpg"
-                    alt="Muhammad Aiman Hakim working as a software engineer"
-                    loading="lazy"
-                    width="1024"
-                    height="1280"
-                    class="h-full w-full object-cover aspect-[4/5]"
-                    onerror="this.src='http://portfolio.test/images/profile.jpg'"
-                >
-            </div>
-        </div>
-
         <div>
-            <h3 class="text-2xl font-bold sm:text-3xl">
-                Hi, I'm <span class="text-primary">Muhammad Aiman Hakim</span>.
-            </h3>
-
-                            <p class="leading-relaxed text-muted-foreground mt-5">
-                    A software engineer passionate about creating scalable backend systems...
-                </p>
-            
-            <div class="mt-9 grid grid-cols-2 gap-4">
-                                    <div class="glass-card rounded-2xl p-5">
-                        <p class="font-display text-2xl font-bold text-primary">10+</p>
-                        <p class="mt-1 text-sm text-muted-foreground">Projects</p>
-                    </div>
-                                    <div class="glass-card rounded-2xl p-5">
-                        <p class="font-display text-2xl font-bold text-primary">2+</p>
-                        <p class="mt-1 text-sm text-muted-foreground">Years Learning</p>
-                    </div>
-                                    <div class="glass-card rounded-2xl p-5">
-                        <p class="font-display text-2xl font-bold text-primary">Laravel Expert</p>
-                        <p class="mt-1 text-sm text-muted-foreground">Expert</p>
-                    </div>
-                                    <div class="glass-card rounded-2xl p-5">
-                        <p class="font-display text-2xl font-bold text-primary">Full Stack</p>
-                        <p class="mt-1 text-sm text-muted-foreground">Development</p>
-                    </div>
-                            </div>
+            <p class="max-w-3xl text-lg leading-8 text-muted-foreground">Recent Bachelor of Computer Science (Hons.) in Netcentric Computing graduate with hands-on experience across web application development, database management, system implementation and the software development lifecycle.</p>
+            <p class="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">I enjoy turning requirements into usable systems — from business platforms and operational workflows to mobile applications, biometric attendance and CCTV-based examination monitoring. I care about maintainable code, clear interfaces and solving the actual problem behind the feature.</p>
+            <div class="mt-9 grid gap-3 sm:grid-cols-3">
+                <div class="metric-card metric-card-large"><span class="number">01</span><strong>2026</strong><span>Bachelor's graduate</span></div>
+                <div class="metric-card metric-card-large"><span class="number">02</span><strong>14 weeks</strong><span>Industry internship</span></div>
+                <div class="metric-card metric-card-large"><span class="number">03</span><strong>6+</strong><span>Selected projects</span></div>
+            </div>
         </div>
     </div>
 </section>
-        <section id="skills" class="relative scroll-mt-24 py-24 md:py-32">
-    <div class="mx-auto max-w-6xl px-5">
-        <div class="mx-auto max-w-2xl text-center">
-    <p class="font-mono text-xs uppercase tracking-[0.3em] text-primary">Skills</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">The stack I build with</h2>
-            <p class="mt-4 text-muted-foreground">From database schema to deployed interface — tools I use daily.</p>
-    </div>
-
-        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                            <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <div class="glass-card h-full rounded-3xl p-6">
-                            <span class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                                <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                                </svg>
-                            </span>
-                            <h3 class="mt-5 text-lg font-semibold">Backend</h3>
-                            <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Laravel
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        PHP (Vanilla)
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        RESTful API Development
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        JSON APIs
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Eloquent ORM
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Authentication &amp; Authorization
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Node.js
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Express
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        NestJS
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        MVC Architecture
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Object-Oriented Programming (OOP)
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
+        <section id="skills" class="scroll-mt-24 border-y border-border bg-white/[.012]">
+    <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-28">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><span class="eyebrow">02 / Toolkit</span><h2 class="section-title mt-5">The stack behind the work.</h2></div><p class="max-w-md text-sm leading-6 text-muted-foreground">A practical toolkit built through university projects, freelance development, internship work and current software engineering projects.</p></div>
+        <div class="mt-12 grid gap-4 md:grid-cols-2">
+                            <div class="skill-card glass glass-hover rounded-3xl p-6 sm:p-7">
+                    <div class="flex items-center justify-between"><div class="grid size-11 place-items-center rounded-xl border border-primary/20 bg-primary/10 font-mono text-xs font-bold text-primary">&lt;/&gt;</div><span class="number">01</span></div>
+                    <h3 class="mt-7 font-display text-xl font-bold">Programming</h3>
+                    <div class="mt-5 flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">PHP</span><span class="tag">Java</span><span class="tag">C++</span></div>
                 </div>
-                            <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <div class="glass-card h-full rounded-3xl p-6">
-                            <span class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                                <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                            </span>
-                            <h3 class="mt-5 text-lg font-semibold">Frontend</h3>
-                            <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Blade
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Livewire
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Alpine.js
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Tailwind CSS
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Bootstrap
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        JavaScript &amp; TypeScript
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        React &amp; Vue.js
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Inertia.js
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        HTML5 &amp; CSS3
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
+                            <div class="skill-card glass glass-hover rounded-3xl p-6 sm:p-7">
+                    <div class="flex items-center justify-between"><div class="grid size-11 place-items-center rounded-xl border border-primary/20 bg-primary/10 font-mono text-xs font-bold text-primary">01</div><span class="number">02</span></div>
+                    <h3 class="mt-7 font-display text-xl font-bold">Web Engineering</h3>
+                    <div class="mt-5 flex flex-wrap gap-2"><span class="tag">Laravel</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
                 </div>
-                            <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <div class="glass-card h-full rounded-3xl p-6">
-                            <span class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                                <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                                </svg>
-                            </span>
-                            <h3 class="mt-5 text-lg font-semibold">Database</h3>
-                            <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        MySQL
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        PostgreSQL
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Relational Database Design
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Database Migration
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Query Optimization
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Geoserver &amp; OpenLayers (GIS)
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
+                            <div class="skill-card glass glass-hover rounded-3xl p-6 sm:p-7">
+                    <div class="flex items-center justify-between"><div class="grid size-11 place-items-center rounded-xl border border-primary/20 bg-primary/10 font-mono text-xs font-bold text-primary">DB</div><span class="number">03</span></div>
+                    <h3 class="mt-7 font-display text-xl font-bold">Data &amp; Backend</h3>
+                    <div class="mt-5 flex flex-wrap gap-2"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">Database Design</span></div>
                 </div>
-                            <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <div class="glass-card h-full rounded-3xl p-6">
-                            <span class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                                <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </span>
-                            <h3 class="mt-5 text-lg font-semibold">Tools</h3>
-                            <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Git &amp; GitHub
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        GitLab CI/CD
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Composer
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Linux (Ubuntu)
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        PHPUnit
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Jira (Agile / Scrum)
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Odoo ERP
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                            <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <div class="glass-card h-full rounded-3xl p-6">
-                            <span class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                                <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.858 15.355-5.858 21.213 0" />
-                                </svg>
-                            </span>
-                            <h3 class="mt-5 text-lg font-semibold">Networking</h3>
-                            <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        TCP/IP, DNS &amp; BGP
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Cisco Routing &amp; Switching
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Wireshark Packet Analysis
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Cisco Packet Tracer &amp; GNS3
-                                    </li>
-                                                                    <li class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/60 hover:text-primary">
-                                        Cybersecurity Awareness
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
+                            <div class="skill-card glass glass-hover rounded-3xl p-6 sm:p-7">
+                    <div class="flex items-center justify-between"><div class="grid size-11 place-items-center rounded-xl border border-primary/20 bg-primary/10 font-mono text-xs font-bold text-primary">OS</div><span class="number">04</span></div>
+                    <h3 class="mt-7 font-display text-xl font-bold">Platforms &amp; Tools</h3>
+                    <div class="mt-5 flex flex-wrap gap-2"><span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">macOS</span><span class="tag">Flutter</span><span class="tag">Arduino</span></div>
                 </div>
                     </div>
     </div>
 </section>
-        <section id="experience" class="relative scroll-mt-24 py-24 md:py-32">
-    <div class="mx-auto max-w-4xl px-5">
-        <div class="mx-auto max-w-2xl text-center">
-    <p class="font-mono text-xs uppercase tracking-[0.3em] text-primary">Experience</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">Where I&#039;ve worked</h2>
-    </div>
-
-        <div class="relative mt-14 pl-8 sm:pl-12">
-            <span
-                aria-hidden="true"
-                class="absolute left-[7px] top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-primary/70 via-border to-transparent sm:left-[11px]"
-            ></span>
-
-                            <div class="relative pb-12 last:pb-0">
-                    <span class="absolute -left-8 top-2 size-4 rounded-full border-2 border-primary bg-background sm:-left-12"></span>
-
-                    <div class="glass-card rounded-3xl p-6">
-                        <div class="flex flex-wrap items-baseline justify-between gap-2">
-                            <h3 class="text-xl font-semibold">Software Engineer</h3>
-                            <span class="font-mono text-xs uppercase tracking-widest text-primary">
-                                                                    Present
-                                                            </span>
-                        </div>
-                        <p class="mt-1 text-sm text-muted-foreground">IT Madani Expert Sdn Bhd</p>
-
-                                                    <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Developed and maintained procurement and contractor management systems for Lembaga Air Perak (LAP) using Vanilla PHP and MySQL while integrating new features into existing legacy workflows.
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Designed and developed a Laravel-based Tadika Alumni &amp; Management System from scratch, implementing role-based access control, authentication, reporting modules, and Excel export functionality.
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Managed the complete software development lifecycle including requirements gathering, database design, backend development, testing, debugging, deployment, and production support.
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Performed reverse engineering on a legacy PLGS system without source code by analyzing live PostgreSQL databases and existing business workflows.
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Contributed to the redevelopment of the PLGS platform using Laravel, PostgreSQL, Geoserver, OpenLayers, and Proj4js to support modern GIS-based land management.
-                                    </li>
-                                                            </ul>
-                                            </div>
-                </div>
-                            <div class="relative pb-12 last:pb-0">
-                    <span class="absolute -left-8 top-2 size-4 rounded-full border-2 border-primary bg-background sm:-left-12"></span>
-
-                    <div class="glass-card rounded-3xl p-6">
-                        <div class="flex flex-wrap items-baseline justify-between gap-2">
-                            <h3 class="text-xl font-semibold">Junior Software Engineer</h3>
-                            <span class="font-mono text-xs uppercase tracking-widest text-primary">
-                                                                    Oct 2025
-                                                            </span>
-                        </div>
-                        <p class="mt-1 text-sm text-muted-foreground">Carsome (K-Youth Program)</p>
-
-                                                    <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Designed, developed, and maintained scalable backend services using JavaScript, Node.js, Express, and NestJS.
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Utilized Git, GitHub, and GitLab CI/CD pipelines to streamline collaborative development and deployment workflows.
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Utilized Jira actively for sprint planning, backlog refinement, and daily task tracking, increasing overall delivery transparency within a fast-paced Agile/Scrum team environment.
-                                    </li>
-                                                            </ul>
-                                            </div>
-                </div>
-                            <div class="relative pb-12 last:pb-0">
-                    <span class="absolute -left-8 top-2 size-4 rounded-full border-2 border-primary bg-background sm:-left-12"></span>
-
-                    <div class="glass-card rounded-3xl p-6">
-                        <div class="flex flex-wrap items-baseline justify-between gap-2">
-                            <h3 class="text-xl font-semibold">Internship</h3>
-                            <span class="font-mono text-xs uppercase tracking-widest text-primary">
-                                                                    Jan 2025
-                                                            </span>
-                        </div>
-                        <p class="mt-1 text-sm text-muted-foreground">Novutal Consulting Sdn Bhd</p>
-
-                                                    <ul class="mt-4 flex flex-wrap gap-2">
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Developed and enhanced CRM and HRM modules in Odoo (lead management, sales tracking, biometric attendance).
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Designed workflow diagrams and system documentation to improve usability and training.
-                                    </li>
-                                                                    <li class="rounded-full bg-secondary px-3 py-1 text-xs text-muted-foreground">
-                                        Assisted in website development using HTML, CSS, and JavaScript, ensuring responsive and user friendly design.
-                                    </li>
-                                                            </ul>
-                                            </div>
-                </div>
+        <section id="experience" class="mx-auto max-w-7xl scroll-mt-24 px-5 py-24 lg:px-8 lg:py-32">
+    <div class="grid gap-12 lg:grid-cols-[.55fr_1.45fr]">
+        <div>
+            <span class="eyebrow">03 / Experience</span>
+            <h2 class="section-title mt-5">Engineering<br><span class="text-gradient">experience.</span></h2>
+            <p class="mt-6 max-w-sm text-sm leading-7 text-muted-foreground">Professional software development, internship delivery and freelance work — followed by the earlier work experience that helped build my discipline and teamwork.</p>
+        </div>
+        <div class="relative space-y-5 before:absolute before:bottom-6 before:left-[9px] before:top-6 before:w-px before:bg-gradient-to-b before:from-primary/70 before:via-white/10 before:to-transparent">
+                            <article class="relative pl-8">
+                    <span class="absolute left-0 top-8 size-[19px] rounded-full border-4 border-background bg-primary shadow-[0_0_0_4px_rgba(124,92,255,.12)]"></span>
+                    <div class="glass glass-hover rounded-3xl p-6 sm:p-8">
+                        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div><div class="flex flex-wrap items-center gap-2"><span class="tag">Job</span><span class="tag border-emerald-400/20 bg-emerald-400/[.06] text-emerald-300">Current</span></div><h3 class="mt-4 text-xl font-bold">Software Engineer</h3><p class="mt-1 text-sm text-primary">MADANI IT EXPERTS SDN. BHD.</p></div><span class="font-mono text-[10px] uppercase tracking-[.15em] text-muted-foreground">Jul 2026 — Present</span></div>
+                        <p class="mt-5 text-sm leading-7 text-muted-foreground">Developing and maintaining web-based systems using Laravel, PHP, JavaScript, HTML, CSS and MySQL.</p>                        <ul class="mt-5 grid gap-3 text-sm leading-6 text-muted-foreground"><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Developed and maintained web-based systems using Laravel, PHP, JavaScript, HTML, CSS, and MySQL.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Designed, developed, and enhanced system modules based on client and organizational requirements.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Managed software development work from requirement analysis to implementation, testing, debugging, and deployment.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Performed system testing, troubleshooting, and database management to support performance and reliability.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Currently leading and managing the development of an Exam Monitoring System (EMOS) with CCTV-based monitoring and AI-powered detection features.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Developed the Payung system for managing insurance and takaful agents.</span></li></ul>                    </div>
+                </article>
+                            <article class="relative pl-8">
+                    <span class="absolute left-0 top-8 size-[19px] rounded-full border-4 border-background bg-primary shadow-[0_0_0_4px_rgba(124,92,255,.12)]"></span>
+                    <div class="glass glass-hover rounded-3xl p-6 sm:p-8">
+                        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div><div class="flex flex-wrap items-center gap-2"><span class="tag">Internship</span></div><h3 class="mt-4 text-xl font-bold">Programmer Intern</h3><p class="mt-1 text-sm text-primary">MADANI IT EXPERTS COMPANY</p></div><span class="font-mono text-[10px] uppercase tracking-[.15em] text-muted-foreground">Mar 2026 — Jul 2026</span></div>
+                        <p class="mt-5 text-sm leading-7 text-muted-foreground">14-week internship contributing to web and mobile application development.</p>                        <ul class="mt-5 grid gap-3 text-sm leading-6 text-muted-foreground"><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Developed and maintained a Contractor Management System for Lembaga Air Perak to support contractor registration, project monitoring, and contract management processes.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Designed and enhanced system modules using Laravel, PHP, JavaScript, HTML, CSS, and MySQL.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Assisted in database design, testing, debugging, and troubleshooting.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Assisted in developing a Flutter-based Tadika Alumni mobile application and enhanced functionality based on user requirements.</span></li></ul>                    </div>
+                </article>
+                            <article class="relative pl-8">
+                    <span class="absolute left-0 top-8 size-[19px] rounded-full border-4 border-background bg-primary shadow-[0_0_0_4px_rgba(124,92,255,.12)]"></span>
+                    <div class="glass glass-hover rounded-3xl p-6 sm:p-8">
+                        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div><div class="flex flex-wrap items-center gap-2"><span class="tag">Freelance</span><span class="tag border-emerald-400/20 bg-emerald-400/[.06] text-emerald-300">Current</span></div><h3 class="mt-4 text-xl font-bold">Freelance Web Developer</h3><p class="mt-1 text-sm text-primary">Independent</p></div><span class="font-mono text-[10px] uppercase tracking-[.15em] text-muted-foreground">Jan 2024 — Present</span></div>
+                        <p class="mt-5 text-sm leading-7 text-muted-foreground">Developing Laravel-based web applications and supporting technical implementation for student and personal projects.</p>                        <ul class="mt-5 grid gap-3 text-sm leading-6 text-muted-foreground"><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Developed web applications using Laravel, PHP, MySQL, HTML, CSS, and JavaScript.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Designed and implemented authentication, CRUD modules, database management systems, and responsive user interfaces.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Performed debugging, testing, and system optimization.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Assisted students with deployment and technical documentation of their systems.</span></li></ul>                    </div>
+                </article>
+                            <article class="relative pl-8">
+                    <span class="absolute left-0 top-8 size-[19px] rounded-full border-4 border-background bg-primary shadow-[0_0_0_4px_rgba(124,92,255,.12)]"></span>
+                    <div class="glass glass-hover rounded-3xl p-6 sm:p-8">
+                        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div><div class="flex flex-wrap items-center gap-2"><span class="tag">Freelance</span><span class="tag border-emerald-400/20 bg-emerald-400/[.06] text-emerald-300">Current</span></div><h3 class="mt-4 text-xl font-bold">Freelance Academic and Technical Support</h3><p class="mt-1 text-sm text-primary">Independent</p></div><span class="font-mono text-[10px] uppercase tracking-[.15em] text-muted-foreground">Jan 2024 — Present</span></div>
+                        <p class="mt-5 text-sm leading-7 text-muted-foreground">Providing academic and technical support for student assignments and final year projects.</p>                        <ul class="mt-5 grid gap-3 text-sm leading-6 text-muted-foreground"><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Prepared academic reports and technical documentation for student assignments and final year projects.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Assisted students in writing structured reports including introduction, methodology, system design, and testing sections.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Ensured reports complied with academic formatting and submission guidelines.</span></li><li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary"></span><span>Provided guidance on system documentation and presentation of technical content.</span></li></ul>                    </div>
+                </article>
                     </div>
     </div>
-</section>
-        <section id="projects" class="relative scroll-mt-24 py-24 md:py-32">
-    <div class="mx-auto max-w-6xl px-5">
-        <div class="mx-auto max-w-2xl text-center">
-    <p class="font-mono text-xs uppercase tracking-[0.3em] text-primary">Projects</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">Featured work</h2>
-            <p class="mt-4 text-muted-foreground">Selected systems I designed, built and shipped.</p>
-    </div>
 
-        <div class="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-                            
+            <div class="mt-20 border-t border-white/[.07] pt-12">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <article class="glass-card group flex h-full flex-col overflow-hidden rounded-3xl">
-                            <div class="relative overflow-hidden">
-                                <img
-                                    src="http://portfolio.test/images/project-placeholder.svg"
-                                    alt="Payung – Insurance Agent Directory &amp; CRM System interface preview"
-                                    loading="lazy"
-                                    width="1200"
-                                    height="800"
-                                    class="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    onerror="this.src='http://portfolio.test/images/project-placeholder.svg'"
-                                >
-                            </div>
-
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-lg font-semibold">Payung – Insurance Agent Directory &amp; CRM System</h3>
-                                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                    Multi-tenant CRM platform built using Laravel 13, Fortify, Jetstream, and Spatie Permission with automated policy expiration reminders and Livewire reactive interfaces.
-                                </p>
-
-                                                                    <ul class="mt-4 flex flex-wrap gap-2">
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Laravel 13
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Fortify / Jetstream
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Livewire
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Flux UI
-                                            </li>
-                                                                            </ul>
-                                
-                                <div class="mt-6 flex gap-3 pt-2">
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-primary hover:text-primary"
-                                    >
-                                        <svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                        GitHub
-                                    </a>
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform hover:scale-105"
-                                    >
-                                        <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                        Live Demo
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                    <span class="eyebrow">Earlier Experience</span>
+                    <h3 class="mt-4 font-display text-2xl font-bold tracking-tight sm:text-3xl">Work that shaped my <span class="text-gradient">work ethic.</span></h3>
                 </div>
-                            
-                <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <article class="glass-card group flex h-full flex-col overflow-hidden rounded-3xl">
-                            <div class="relative overflow-hidden">
-                                <img
-                                    src="http://portfolio.test/images/project-placeholder.svg"
-                                    alt="PLGS System Modernization &amp; Re-engineering interface preview"
-                                    loading="lazy"
-                                    width="1200"
-                                    height="800"
-                                    class="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    onerror="this.src='http://portfolio.test/images/project-placeholder.svg'"
-                                >
-                            </div>
-
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-lg font-semibold">PLGS System Modernization &amp; Re-engineering</h3>
-                                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                    Reverse-engineered a legacy land management system without access to source code and redesigned the application architecture using Laravel, PostgreSQL, and GIS integrations.
-                                </p>
-
-                                                                    <ul class="mt-4 flex flex-wrap gap-2">
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Laravel 12
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                PostgreSQL
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Reverse Engineering
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Geoserver
-                                            </li>
-                                                                            </ul>
-                                
-                                <div class="mt-6 flex gap-3 pt-2">
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-primary hover:text-primary"
-                                    >
-                                        <svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                        GitHub
-                                    </a>
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform hover:scale-105"
-                                    >
-                                        <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                        Live Demo
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                            
-                <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <article class="glass-card group flex h-full flex-col overflow-hidden rounded-3xl">
-                            <div class="relative overflow-hidden">
-                                <img
-                                    src="http://portfolio.test/images/project-placeholder.svg"
-                                    alt="SPEED System &amp; SPEED Contractor System (LAP) interface preview"
-                                    loading="lazy"
-                                    width="1200"
-                                    height="800"
-                                    class="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    onerror="this.src='http://portfolio.test/images/project-placeholder.svg'"
-                                >
-                            </div>
-
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-lg font-semibold">SPEED System &amp; SPEED Contractor System (LAP)</h3>
-                                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                    Core procurement and contractor management systems for Lembaga Air Perak (LAP) built using Vanilla PHP and MySQL.
-                                </p>
-
-                                                                    <ul class="mt-4 flex flex-wrap gap-2">
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Vanilla PHP
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                MySQL
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Procurement Workflows
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Legacy Integration
-                                            </li>
-                                                                            </ul>
-                                
-                                <div class="mt-6 flex gap-3 pt-2">
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-primary hover:text-primary"
-                                    >
-                                        <svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                        GitHub
-                                    </a>
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform hover:scale-105"
-                                    >
-                                        <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                        Live Demo
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                            
-                <div>
-                    <div data-tilt class="h-full transition-transform duration-300">
-                        <article class="glass-card group flex h-full flex-col overflow-hidden rounded-3xl">
-                            <div class="relative overflow-hidden">
-                                <img
-                                    src="http://portfolio.test/images/project-placeholder.svg"
-                                    alt="Tadika Alumni &amp; Management System interface preview"
-                                    loading="lazy"
-                                    width="1200"
-                                    height="800"
-                                    class="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    onerror="this.src='http://portfolio.test/images/project-placeholder.svg'"
-                                >
-                            </div>
-
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-lg font-semibold">Tadika Alumni &amp; Management System</h3>
-                                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
-                                    Laravel-based alumni management platform featuring role-based authentication, reporting modules, and Excel export functionality.
-                                </p>
-
-                                                                    <ul class="mt-4 flex flex-wrap gap-2">
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Laravel 12
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                MySQL
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Laravel Breeze
-                                            </li>
-                                                                                    <li class="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-1 text-[11px] text-primary">
-                                                Tailwind CSS
-                                            </li>
-                                                                            </ul>
-                                
-                                <div class="mt-6 flex gap-3 pt-2">
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors hover:border-primary hover:text-primary"
-                                    >
-                                        <svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                        GitHub
-                                    </a>
-                                    <a
-                                        href="#contact"
-                                                                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform hover:scale-105"
-                                    >
-                                        <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                        Live Demo
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                    </div>
-    </div>
-</section>
-        <section id="services" class="relative scroll-mt-24 py-24 md:py-32">
-    <div class="mx-auto max-w-6xl px-5">
-        <div class="mx-auto max-w-2xl text-center">
-    <p class="font-mono text-xs uppercase tracking-[0.3em] text-primary">Services</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">How I can help</h2>
-    </div>
-
-        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                            <div class="glass-card group h-full rounded-3xl p-6">
-                    <span class="inline-flex rounded-2xl border border-primary/30 p-3 text-primary transition-shadow group-hover:shadow-primary-sm">
-                        <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                        </svg>
-                    </span>
-                    <h3 class="mt-5 text-lg font-semibold">Enterprise Laravel Development</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Building secure and scalable web applications using Laravel, Livewire, Blade, Tailwind CSS, RESTful APIs, and relational databases.</p>
-                </div>
-                            <div class="glass-card group h-full rounded-3xl p-6">
-                    <span class="inline-flex rounded-2xl border border-primary/30 p-3 text-primary transition-shadow group-hover:shadow-primary-sm">
-                        <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                    </span>
-                    <h3 class="mt-5 text-lg font-semibold">System Modernization &amp; Legacy Migration</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Reverse-engineering legacy systems without original documentation, recovering critical business logic, and re-architecting modern web applications.</p>
-                </div>
-                            <div class="glass-card group h-full rounded-3xl p-6">
-                    <span class="inline-flex rounded-2xl border border-primary/30 p-3 text-primary transition-shadow group-hover:shadow-primary-sm">
-                        <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    </span>
-                    <h3 class="mt-5 text-lg font-semibold">Database Design &amp; Optimization</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Designing clean relational database schemas (PostgreSQL/MySQL), writing optimized SQL queries, database migrations, and structuring robust data models for web applications.</p>
-                </div>
-                            <div class="glass-card group h-full rounded-3xl p-6">
-                    <span class="inline-flex rounded-2xl border border-primary/30 p-3 text-primary transition-shadow group-hover:shadow-primary-sm">
-                        <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                        </svg>
-                    </span>
-                    <h3 class="mt-5 text-lg font-semibold">Custom Web &amp; Business Applications</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Building tailored web portals, CRM systems, role-based admin panels, and automated Excel reporting tools designed to streamline daily business operations.</p>
-                </div>
-                    </div>
-    </div>
-</section>
-                <section id="contact" class="relative scroll-mt-24 py-24 md:py-32">
-    <div class="mx-auto max-w-6xl px-5">
-        <div class="mx-auto max-w-2xl text-center">
-    <p class="font-mono text-xs uppercase tracking-[0.3em] text-primary">Contact</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">Let&#039;s build something</h2>
-            <p class="mt-4 text-muted-foreground">Tell me about your project and I&#039;ll get back to you within a day.</p>
-    </div>
-
-        <div class="mt-14 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-            <div class="glass-card h-full rounded-3xl p-7">
-                <ul class="space-y-6">
-                                            <li class="flex min-w-0 items-start gap-4">
-                            <span class="mt-0.5 inline-flex shrink-0 rounded-xl bg-primary/10 p-2.5 text-primary">
-                                <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                            </span>
-                            <div class="min-w-0">
-                                <p class="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">Email</p>
-                                <a href="mailto:hakimnizam772@gmail.com" class="truncate text-sm hover:text-primary">hakimnizam772@gmail.com</a>
-                            </div>
-                        </li>
-                    
-                                            <li class="flex min-w-0 items-start gap-4">
-                            <span class="mt-0.5 inline-flex shrink-0 rounded-xl bg-primary/10 p-2.5 text-primary">
-                                <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                            </span>
-                            <div class="min-w-0">
-                                <p class="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">Phone</p>
-                                <p class="truncate text-sm">011-51468013</p>
-                            </div>
-                        </li>
-                    
-                                            <li class="flex min-w-0 items-start gap-4">
-                            <span class="mt-0.5 inline-flex shrink-0 rounded-xl bg-primary/10 p-2.5 text-primary">
-                                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </span>
-                            <div class="min-w-0">
-                                <p class="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">LinkedIn</p>
-                                <a href="https://linkedin.com/in/hakimnizam772" target="_blank" rel="noopener noreferrer" class="truncate text-sm hover:text-primary">https://linkedin.com/in/hakimnizam772</a>
-                            </div>
-                        </li>
-                    
-                                            <li class="flex min-w-0 items-start gap-4">
-                            <span class="mt-0.5 inline-flex shrink-0 rounded-xl bg-primary/10 p-2.5 text-primary">
-                                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </span>
-                            <div class="min-w-0">
-                                <p class="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">GitHub</p>
-                                <a href="https://github.com/hakimnizam772" target="_blank" rel="noopener noreferrer" class="truncate text-sm hover:text-primary">https://github.com/hakimnizam772</a>
-                            </div>
-                        </li>
-                    
-                                            <li class="flex min-w-0 items-start gap-4">
-                            <span class="mt-0.5 inline-flex shrink-0 rounded-xl bg-primary/10 p-2.5 text-primary">
-                                <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </span>
-                            <div class="min-w-0">
-                                <p class="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">Location</p>
-                                <p class="truncate text-sm">Sungai Siput (U), Perak</p>
-                            </div>
-                        </li>
-                                    </ul>
+                <p class="max-w-md text-sm leading-6 text-muted-foreground">Alongside my technical career, I have gained valuable experience in fast-paced service and event environments, strengthening my teamwork, communication, time management, and ability to work effectively under pressure.</p>
             </div>
-
-            <div>
-                <form
-                    x-data="contactForm"
-                    @submit.prevent="submitForm"
-                    action="https://formsubmit.co/ajax/hakimnizam772@gmail.com"
-                    method="POST"
-                    class="glass-card rounded-3xl p-7"
-                >
-                    <input type="hidden" name="_token" value="GSl7Fg1l46E4NHWWklQknVQmZKZMV3uYQGzChNX8" autocomplete="off">                    <input type="hidden" name="_subject" value="New Portfolio Contact Message!">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_template" value="table">
-                    <div class="grid gap-5 sm:grid-cols-2">
-                        <div>
-                            <label for="name" class="form-label">Name</label>
-                            <input id="name" name="name" type="text" required placeholder="Your name" class="form-input">
+            <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                    <article class="glass glass-hover rounded-2xl p-5">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="font-mono text-[9px] uppercase tracking-[.18em] text-primary">Part-time</span>
+                                <h4 class="mt-2 text-base font-semibold text-foreground">Part-Time Crew Member</h4>
+                                <p class="mt-1 text-xs text-muted-foreground">Kenangan Coffee</p>
+                            </div>
+                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">2026</span>
                         </div>
-                        <div>
-                            <label for="email" class="form-label">Email</label>
-                            <input id="email" name="email" type="email" required placeholder="you@email.com" class="form-input">
+                                                    <ul class="mt-4 space-y-2 text-xs leading-5 text-muted-foreground">
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Support daily café operations and customer service.</span></li>
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Assist with beverage preparation and order handling.</span></li>
+                                                            </ul>
+                                            </article>
+                                    <article class="glass glass-hover rounded-2xl p-5">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="font-mono text-[9px] uppercase tracking-[.18em] text-primary">Part-time</span>
+                                <h4 class="mt-2 text-base font-semibold text-foreground">Part-Time Crew Member</h4>
+                                <p class="mt-1 text-xs text-muted-foreground">Llao Llao — Aeon Kinta City, Ipoh</p>
+                            </div>
+                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">2025 — 2025</span>
+                        </div>
+                                                    <ul class="mt-4 space-y-2 text-xs leading-5 text-muted-foreground">
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Assisted in food preparation and kitchen operations to support smooth daily service.</span></li>
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Maintained cleanliness and followed food safety and hygiene regulations.</span></li>
+                                                            </ul>
+                                            </article>
+                                    <article class="glass glass-hover rounded-2xl p-5">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="font-mono text-[9px] uppercase tracking-[.18em] text-primary">Part-time</span>
+                                <h4 class="mt-2 text-base font-semibold text-foreground">Part-Time Kitchen Crew</h4>
+                                <p class="mt-1 text-xs text-muted-foreground">DOREMI Steamboat Restaurant — Meru, Ipoh</p>
+                            </div>
+                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">2024 — 2024</span>
+                        </div>
+                                                    <ul class="mt-4 space-y-2 text-xs leading-5 text-muted-foreground">
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Prepared frozen yogurt products according to standard operating procedures.</span></li>
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Provided efficient and friendly customer service.</span></li>
+                                                            </ul>
+                                            </article>
+                                    <article class="glass glass-hover rounded-2xl p-5">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="font-mono text-[9px] uppercase tracking-[.18em] text-primary">Part-time</span>
+                                <h4 class="mt-2 text-base font-semibold text-foreground">Part-Time Barista</h4>
+                                <p class="mt-1 text-xs text-muted-foreground">McDonald&#039;s — Klebang, Ipoh</p>
+                            </div>
+                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">2022 — 2022</span>
+                        </div>
+                                                    <ul class="mt-4 space-y-2 text-xs leading-5 text-muted-foreground">
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Prepared beverages and food items according to company standards.</span></li>
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Provided friendly and efficient customer service in a fast-paced environment.</span></li>
+                                                            </ul>
+                                            </article>
+                                    <article class="glass glass-hover rounded-2xl p-5">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="font-mono text-[9px] uppercase tracking-[.18em] text-primary">Part-time</span>
+                                <h4 class="mt-2 text-base font-semibold text-foreground">Part-Time Catering Crew</h4>
+                                <p class="mt-1 text-xs text-muted-foreground">Event Catering Service</p>
+                            </div>
+                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">2018 — 2018</span>
+                        </div>
+                                                    <ul class="mt-4 space-y-2 text-xs leading-5 text-muted-foreground">
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Worked as part of a catering team in high-pressure event environments.</span></li>
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Followed hygiene and safety procedures while handling food and equipment.</span></li>
+                                                            </ul>
+                                            </article>
+                                    <article class="glass glass-hover rounded-2xl p-5">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="font-mono text-[9px] uppercase tracking-[.18em] text-primary">Part-time</span>
+                                <h4 class="mt-2 text-base font-semibold text-foreground">Part-Time Burger Stall Assistant</h4>
+                                <p class="mt-1 text-xs text-muted-foreground">Burger Vendor</p>
+                            </div>
+                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">2016 — 2016</span>
+                        </div>
+                                                    <ul class="mt-4 space-y-2 text-xs leading-5 text-muted-foreground">
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Prepared and sold burgers to customers.</span></li>
+                                                                    <li class="flex gap-2"><span class="mt-1.5 size-1 shrink-0 rounded-full bg-accent"></span><span>Handled customer orders and payments.</span></li>
+                                                            </ul>
+                                            </article>
+                            </div>
+        </div>
+    </section>
+        <section id="projects" class="scroll-mt-24 border-y border-border bg-white/[.012]">
+    <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><span class="eyebrow">04 / Selected Work</span><h2 class="section-title mt-5">Selected <span class="text-gradient">systems.</span></h2></div><p class="max-w-md text-sm leading-6 text-muted-foreground">A curated selection of professional, freelance and academic work — focused on useful systems, clean interfaces and practical engineering.</p></div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2">
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] md:col-span-2 ring-1 ring-primary/10">
+                    <div class="grid lg:grid-cols-[1.15fr_.85fr]">
+                        <div class="relative aspect-[16/8] lg:aspect-auto min-h-[20rem] overflow-hidden bg-secondary">
+                                                        <img src="/images/emos.png" alt="Exam Monitoring System (EMOS)" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">01</span><span class="tag bg-black/30 text-white/50">PROJECT</span><span class="tag bg-primary/15 text-primary">Featured</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Exam Monitoring System (EMOS)</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">An examination monitoring platform with CCTV-based monitoring and AI-powered detection, covering examinations, students, invigilators, halls, cameras, attendance and incidents.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">CCTV</span><span class="tag">AI Detection</span></div></div>
                         </div>
                     </div>
-
-                    <div class="mt-5">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input id="subject" name="subject" type="text" required placeholder="What is this about?" class="form-input">
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/ai-marketing.png" alt="AI Marketing Assistant" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">02</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">AI Marketing Assistant</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">An AI-powered marketing workspace for managing product information, campaigns, AI-generated content and marketing workflows in one platform.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">AI</span><span class="tag">MySQL</span></div></div>
+                        </div>
                     </div>
-
-                    <div class="mt-5">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project…" class="form-input resize-none"></textarea>
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/payung.png" alt="Payung — Insurance &amp; Takaful Agent Management System" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">03</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Payung — Insurance &amp; Takaful Agent Management System</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">A web-based system for managing insurance and takaful agents, built to support agent administration and operational workflows.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">MySQL</span></div><div class="mt-6 flex flex-wrap gap-3"><a href="http://payung.test/" target="_blank" rel="noreferrer" class="text-xs font-semibold text-primary hover:underline">Open system ↗</a> </div></div>
+                        </div>
                     </div>
-
-                    <button type="submit" class="btn-primary mt-6" :disabled="loading">
-                        <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
-                        <span x-text="loading ? 'Sending…' : 'Send Message'"></span>
-                    </button>
-
-                    <p
-                        x-show="sent"
-                        x-cloak
-                        x-transition
-                        role="status"
-                        class="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-2 text-sm text-primary"
-                    >
-                        <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Message sent — thank you!
-                    </p>
-                </form>
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/lap.png" alt="Contractor Management System — Lembaga Air Perak" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">04</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Contractor Management System — Lembaga Air Perak</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Web-based contractor management system supporting contractor registration, project monitoring and contract management processes.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span></div></div>
+                        </div>
+                    </div>
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/tadika.png" alt="Tadika Alumni Application" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">05</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Tadika Alumni Application</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Flutter-based mobile application for alumni information management, enhanced with new features and tested for application reliability.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Flutter</span><span class="tag">Mobile App</span><span class="tag">Dart</span></div></div>
+                        </div>
+                    </div>
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/attendance.png" alt="Smart Attendance System using Fingerprint Recognition" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">06</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Smart Attendance System using Fingerprint Recognition</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Final Year Project: a web-based student attendance system using Arduino and biometric fingerprint authentication with MySQL attendance records.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">MySQL</span><span class="tag">Arduino IDE</span><span class="tag">Fingerprint Sensor</span></div></div>
+                        </div>
+                    </div>
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/train-booking.png" alt="Train Booking System — Flutter" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">07</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Train Booking System — Flutter</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">A Flutter mobile application for train ticket booking and reservation with user registration, train search, seat booking and booking history.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Firebase</span><span class="tag">Mobile App</span></div></div>
+                        </div>
+                    </div>
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/wattwizard.png" alt="WattWizard — Electricity Bill Estimator" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">08</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">WattWizard — Electricity Bill Estimator</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Android application that estimates electricity bills from energy usage and rebate percentage, applying different rates across usage blocks.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Android Studio</span><span class="tag">Java</span><span class="tag">XML</span></div></div>
+                        </div>
+                    </div>
+                </article>
+                    </div>
+    </div>
+</section>
+        <section id="services" class="mx-auto max-w-7xl scroll-mt-24 px-5 py-24 lg:px-8 lg:py-28">
+    <div class="grid gap-10 lg:grid-cols-[.65fr_1.35fr]"><div><span class="eyebrow">05 / Capabilities</span><h2 class="section-title mt-5">From requirement<br>to <span class="text-gradient">working system.</span></h2><p class="mt-6 max-w-sm text-sm leading-7 text-muted-foreground">The areas where I can contribute across a software project lifecycle.</p></div><div class="grid gap-4 sm:grid-cols-2">
+                <div class="glass glass-hover rounded-3xl p-6 sm:p-7"><span class="number">01</span><h3 class="mt-5 font-display text-lg font-bold">Web Engineering</h3><p class="mt-2 text-sm leading-6 text-muted-foreground">Responsive web applications and business systems using Laravel, PHP, JavaScript and modern UI patterns.</p></div><div class="glass glass-hover rounded-3xl p-6 sm:p-7"><span class="number">02</span><h3 class="mt-5 font-display text-lg font-bold">Database Engineering</h3><p class="mt-2 text-sm leading-6 text-muted-foreground">Relational data models, CRUD modules, queries and reliable application storage.</p></div><div class="glass glass-hover rounded-3xl p-6 sm:p-7"><span class="number">03</span><h3 class="mt-5 font-display text-lg font-bold">System Delivery</h3><p class="mt-2 text-sm leading-6 text-muted-foreground">Requirement analysis, implementation, testing, debugging and deployment support.</p></div><div class="glass glass-hover rounded-3xl p-6 sm:p-7"><span class="number">04</span><h3 class="mt-5 font-display text-lg font-bold">Automation &amp; Integration</h3><p class="mt-2 text-sm leading-6 text-muted-foreground">Practical integrations across APIs, hardware, mobile applications, CCTV and AI-assisted workflows.</p></div>    </div></div>
+</section>
+        <section id="contact" class="scroll-mt-24 border-t border-border">
+    <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+        <div class="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-primary/[.06] p-7 sm:p-10 lg:p-14">
+            <div class="absolute -right-24 -top-24 size-72 rounded-full bg-primary/15 blur-3xl"></div>
+            <div class="relative grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+                <div><span class="eyebrow">06 / Contact</span><h2 class="mt-6 max-w-3xl text-4xl font-bold sm:text-6xl">Have a project in mind?<br><span class="text-primary">Let's build it.</span></h2><p class="mt-6 max-w-xl text-sm leading-7 text-muted-foreground">I'm open to software development, web development and IT-related opportunities.</p></div>
+                <div class="space-y-3 text-sm">
+                    <a href="mailto:aamieyruljr@gmail.com" class="glass block rounded-2xl p-5 transition hover:border-primary/30"><span class="number">EMAIL</span><p class="mt-2 font-semibold break-all">aamieyruljr@gmail.com</p></a>
+                    <a href="tel:601137267929" class="glass block rounded-2xl p-5 transition hover:border-primary/30"><span class="number">PHONE</span><p class="mt-2 font-semibold">+60 11-37267929</p></a>
+                    <div class="glass rounded-2xl p-5"><span class="number">LOCATION</span><p class="mt-2 font-semibold">Ipoh, Perak</p></div>
+                </div>
             </div>
         </div>
     </div>
 </section>
     </main>
-
-    <footer class="border-t border-border py-12">
-    <div class="mx-auto grid max-w-6xl gap-8 px-5 md:grid-cols-[1fr_auto]">
-        <div>
-            <p class="font-display text-lg font-bold">
-                aiman<span class="text-primary">.</span>hakim
-            </p>
-            <p class="mt-2 max-w-sm text-sm text-muted-foreground">
-                Software engineer building scalable backend systems and modern web applications.
-            </p>
-            <ul class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
-                                    <li>
-                        <a href="#home" class="transition-colors hover:text-primary">Home</a>
-                    </li>
-                                    <li>
-                        <a href="#about" class="transition-colors hover:text-primary">About</a>
-                    </li>
-                                    <li>
-                        <a href="#skills" class="transition-colors hover:text-primary">Skills</a>
-                    </li>
-                                    <li>
-                        <a href="#experience" class="transition-colors hover:text-primary">Experience</a>
-                    </li>
-                                    <li>
-                        <a href="#projects" class="transition-colors hover:text-primary">Projects</a>
-                    </li>
-                                    <li>
-                        <a href="#services" class="transition-colors hover:text-primary">Services</a>
-                    </li>
-                                    <li>
-                        <a href="#contact" class="transition-colors hover:text-primary">Contact</a>
-                    </li>
-                            </ul>
-        </div>
-
-        <div class="flex items-start gap-3">
-                            <a
-                    href="https://github.com/hakimnizam772"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                    class="rounded-full border border-border p-2.5 transition-colors hover:border-primary hover:text-primary"
-                >
-                    <svg class="size-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-            
-                            <a
-                    href="https://linkedin.com/in/hakimnizam772"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    class="rounded-full border border-border p-2.5 transition-colors hover:border-primary hover:text-primary"
-                >
-                    <svg class="size-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </a>
-            
-                            <a
-                    href="mailto:hakimnizam772@gmail.com"
-                    aria-label="Email"
-                    class="rounded-full border border-border p-2.5 transition-colors hover:border-primary hover:text-primary"
-                >
-                    <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                </a>
-                    </div>
-    </div>
-
-    <div class="mx-auto mt-10 max-w-6xl border-t border-border px-5 pt-6 text-xs text-muted-foreground">
-        <p>&copy; 2026 Muhammad Aiman Hakim. All rights reserved.</p>
-        <p class="mt-1">Designed &amp; Developed by Muhammad Aiman Hakim</p>
+    <footer class="border-t border-border">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <p>© 2026 Mohamad Amirul Helmi. Built with Laravel.</p>
+        <div class="flex items-center gap-5"><a href="#home" class="transition hover:text-primary">Back to top ↑</a></div>
     </div>
 </footer>
 </body>
