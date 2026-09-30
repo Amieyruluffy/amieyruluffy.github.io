@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html { scroll-behavior: smooth; }
+    body {
+        @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+        background-image:
+            radial-gradient(circle at 12% 8%, rgba(155,124,255,.10), transparent 30rem),
+            radial-gradient(circle at 88% 28%, rgba(244,184,96,.055), transparent 26rem),
+            linear-gradient(rgba(255,255,255,.008) 1px, transparent 1px);
+        background-size: auto, auto, 100% 4px;
+        -webkit-font-smoothing: antialiased;
+    }
+    h1,h2,h3,h4 { @apply font-display; letter-spacing: -0.035em; }
+    ::selection { background: rgba(155,124,255,.35); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #070914; }
+    ::-webkit-scrollbar-thumb { background: #3d345f; border-radius: 999px; }
+    [x-cloak] { display:none!important; }
+}
+
+@layer components {
+    .site-grid {
+        background-image: linear-gradient(rgba(255,255,255,.032) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px);
+        background-size: 42px 42px;
+        mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,.7) 55%, transparent 100%);
+    }
+    .glass { @apply border border-border bg-white/[0.025] backdrop-blur-xl; box-shadow: inset 0 1px 0 rgba(255,255,255,.035); }
+    .glass-hover { @apply transition duration-500; }
+    .glass-hover:hover { transform: translateY(-6px); border-color: rgba(155,124,255,.32); box-shadow: 0 24px 70px -35px rgba(155,124,255,.55); }
+    .eyebrow { @apply inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.025] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.22em] text-primary; }
+    .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition duration-300 hover:-translate-y-0.5 hover:shadow-violet; }
+    .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white/[0.025] px-5 py-3 text-sm font-semibold transition duration-300 hover:border-primary/40 hover:bg-primary/[0.06]; }
+    .tag { @apply rounded-full border border-border bg-white/[0.035] px-2.5 py-1 font-mono text-[10px] text-muted-foreground; }
+    .section-title { @apply text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl; }
+    .line { @apply h-px bg-gradient-to-r from-primary/50 via-white/10 to-transparent; }
+    .number { @apply font-mono text-xs text-primary/80; }
+    .text-gradient { @apply bg-gradient-to-r from-[#a98bff] via-[#7c5cff] to-[#f4b860] bg-clip-text text-transparent; }
+    .metric-card { @apply flex min-h-[104px] flex-col justify-between rounded-2xl border border-white/[.07] bg-white/[.025] p-4 transition duration-300; }
+    .metric-card:hover { @apply -translate-y-1 border-primary/25 bg-primary/[.045]; }
+    .metric-card strong { @apply font-display text-lg font-bold tracking-tight text-foreground; }
+    .metric-card > span:last-child { @apply text-[10px] uppercase tracking-[.12em] text-muted-foreground; }
+    .metric-card-large { @apply min-h-[130px] p-5; }
+    .metric-card-large strong { @apply text-2xl sm:text-3xl; }
+    .terminal-card, .profile-shell { box-shadow: 0 30px 100px -45px rgba(124,92,255,.65), inset 0 1px 0 rgba(255,255,255,.05); }
+    .profile-placeholder { background: radial-gradient(circle at 50% 35%, rgba(155,124,255,.16), transparent 35%), linear-gradient(145deg,#111528,#090b14); }
+    .skill-card { background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); }
+    .project-card { background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); }
+}
