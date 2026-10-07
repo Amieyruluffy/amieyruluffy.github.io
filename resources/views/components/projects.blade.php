@@ -11,6 +11,7 @@
         'smart-attendance-fingerprint' => 'images/attendance.png',
         'train-booking-flutter' => 'images/train-booking.png',
         'wattwizard' => 'images/wattwizard.png',
+        'si-manis-rasa-candy-wall' => 'images/candywall.png',
     ];
 @endphp
 <section id="projects" class="scroll-mt-24 border-y border-border bg-white/[.012]">
@@ -33,7 +34,7 @@
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">{{ $project->title }}</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">{{ $project->description }}</p></div>
-                            <div class="mt-7"><div class="flex flex-wrap gap-2">@foreach($project->technologies as $tech)<span class="tag">{{ $tech }}</span>@endforeach</div>@if($project->live_url || $project->github_url)<div class="mt-6 flex flex-wrap gap-3">@if($project->live_url)<a href="{{ $project->live_url }}" target="_blank" rel="noreferrer" class="text-xs font-semibold text-primary hover:underline">Open system ↗</a>@endif @if($project->github_url)<a href="{{ $project->github_url }}" target="_blank" rel="noreferrer" class="text-xs font-semibold text-muted-foreground hover:text-foreground">Source ↗</a>@endif</div>@endif</div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2">@foreach($project->technologies as $tech)<span class="tag">{{ $tech }}</span>@endforeach</div>@if($project->live_url || $project->github_url)<div class="mt-6 flex flex-wrap gap-3">@if($project->live_url)<a href="{{ $project->live_url }}" target="_blank" rel="noreferrer" class="text-xs font-semibold text-primary hover:underline">Live demo &#8599;</a>@endif @if($project->github_url)<a href="{{ $project->github_url }}" target="_blank" rel="noreferrer" class="text-xs font-semibold text-muted-foreground hover:text-foreground">Source ↗</a>@endif</div>@endif</div>
                         </div>
                     </div>
                 </article>
