@@ -1,0 +1,18 @@
+<?php
+    $links = [
+        ['label' => 'About', 'href' => '#about'],
+        ['label' => 'Stack', 'href' => '#skills'],
+        ['label' => 'Experience', 'href' => '#experience'],
+        ['label' => 'Projects', 'href' => '#projects'],
+        ['label' => 'Contact', 'href' => '#contact'],
+    ];
+?>
+<header x-data="{scrolled:false,open:false}" @scroll.window="scrolled=window.scrollY>24" :class="scrolled ? 'border-b border-border bg-background/85 backdrop-blur-2xl shadow-[0_10px_40px_-30px_rgba(0,0,0,.8)]' : ''" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#home" class="group flex items-center gap-3"><span class="grid size-10 place-items-center rounded-xl border border-primary/25 bg-primary/[.04] p-1.5 shadow-[0_0_28px_-12px_rgba(155,124,255,.9)]"><img src="<?php echo e(asset('images/logo-mark.svg')); ?>" alt="Amieyrul logo" class="size-full"></span><span class="hidden font-display text-sm font-semibold tracking-tight sm:block">Amieyrul<span class="text-primary">.</span></span></a>
+        <div class="hidden items-center gap-7 lg:flex"><?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><a href="<?php echo e($link['href']); ?>" class="text-xs font-medium text-muted-foreground transition hover:text-foreground"><?php echo e($link['label']); ?></a><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></div>
+        <div class="flex items-center gap-2"><a href="<?php echo e(asset('resume.pdf')); ?>" target="_blank" class="hidden rounded-lg border border-border px-4 py-2 text-xs font-semibold transition hover:border-primary/40 hover:text-primary sm:inline-flex">Resume </a><a href="#contact" class="hidden rounded-lg bg-primary px-4 py-2 text-xs font-bold text-primary-foreground sm:inline-flex">Let's Talk</a><button @click="open=!open" class="rounded-lg border border-border p-2 lg:hidden" aria-label="Toggle menu"><svg x-show="!open" class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg><svg x-show="open" x-cloak class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    </nav>
+    <div x-show="open" x-cloak class="border-t border-border bg-background/95 px-5 py-4 backdrop-blur-2xl lg:hidden"><div class="mx-auto flex max-w-7xl flex-col gap-1"><?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><a href="<?php echo e($link['href']); ?>" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground"><?php echo e($link['label']); ?></a><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><a href="<?php echo e(asset('resume.pdf')); ?>" target="_blank" class="mt-2 rounded-lg bg-primary px-3 py-3 text-center text-sm font-bold text-primary-foreground">View Resume</a></div></div>
+</header>
+<?php /**PATH C:\Users\ASUS\Herd\amieyrul.portfolio\resources\views/components/navbar.blade.php ENDPATH**/ ?>
