@@ -12,6 +12,16 @@ class CandyWallProjectSeeder extends Seeder
      */
     public function run(): void
     {
+        Project::firstOrCreate(['slug' => 'ai-marketing-assistant'], [
+            'title' => 'AI Marketing Assistant',
+            'image' => 'images/ai-marketing.png',
+            'description' => 'An AI-powered marketing workspace for managing product information, campaigns, AI-generated content and marketing workflows in one platform.',
+            'technologies' => ['Laravel', 'PHP', 'JavaScript', 'AI', 'MySQL'],
+            'is_featured' => true,
+            'is_active' => true,
+            'sort_order' => 2,
+        ]);
+
         $remainingProjects = Project::whereNotIn('slug', ['exam-monitoring-system', 'si-manis-rasa-candy-wall'])
             ->orderBy('sort_order')
             ->orderBy('id')

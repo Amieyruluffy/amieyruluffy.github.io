@@ -30,3 +30,13 @@ test('candy wall project seeding is repeatable and preserves existing projects',
 
     expect(file_exists(public_path('images/candywall.png')))->toBeTrue();
 });
+
+test('adding candy wall restores a missing ai marketing project', function () {
+    $this->seed();
+    Project::where('slug', 'ai-marketing-assistant')->delete();
+
+    $this->seed(CandyWallProjectSeeder::class);
+
+    expect(Project::active()->featured()->orderBy('sort_order')->pluck('slug')->take(3)->all())
+        ->toBe(['exam-monitoring-system', 'si-manis-rasa-candy-wall', 'ai-marketing-assistant']);
+});

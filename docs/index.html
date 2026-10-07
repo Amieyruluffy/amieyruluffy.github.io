@@ -3,24 +3,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="YzKoeYW88iCjIzmHsHmOB4jqSkUn5bJfKEBbtQAk">
+    <meta name="csrf-token" content="">
     <title>Mohamad Amirul Helmi — Software Engineer</title>
     <meta name="description" content="Portfolio of Mohamad Amirul Helmi — Software Engineer, web developer and Computer Science graduate.">
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|space-grotesk:400,500,600,700|jetbrains-mono:400,500,600&display=swap" rel="stylesheet">
-    <link rel="preload" as="style" href="./build/assets/app-EOyt6QWm.css" /><link rel="modulepreload" as="script" href="./build/assets/app-C332j3Re.js" /><link rel="stylesheet" href="./build/assets/app-EOyt6QWm.css" /><script type="module" src="./build/assets/app-C332j3Re.js"></script>
-</head>
+    <link rel="preload" as="style" href="/build/assets/app-BZu_ePpy.css" /><link rel="modulepreload" as="script" href="/build/assets/app-C332j3Re.js" /><link rel="stylesheet" href="/build/assets/app-BZu_ePpy.css" /><script type="module" src="/build/assets/app-C332j3Re.js"></script></head>
 <body>
     <div class="site-grid pointer-events-none fixed inset-0 z-[-1] opacity-70"></div>
     <div class="pointer-events-none fixed left-1/2 top-0 z-[-1] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]"></div>
         <header x-data="{scrolled:false,open:false}" @scroll.window="scrolled=window.scrollY>24" :class="scrolled ? 'border-b border-border bg-background/85 backdrop-blur-2xl shadow-[0_10px_40px_-30px_rgba(0,0,0,.8)]' : ''" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#home" class="group flex items-center gap-3"><span class="grid size-10 place-items-center rounded-xl border border-primary/25 bg-primary/[.04] p-1.5 shadow-[0_0_28px_-12px_rgba(155,124,255,.9)]"><img src="./images/logo-mark.svg" alt="Amieyrul logo" class="size-full"></span><span class="hidden font-display text-sm font-semibold tracking-tight sm:block">Amieyrul<span class="text-primary">.</span></span></a>
+        <a href="#home" class="group flex items-center gap-3"><span class="grid size-10 place-items-center rounded-xl border border-primary/25 bg-primary/[.04] p-1.5 shadow-[0_0_28px_-12px_rgba(155,124,255,.9)]"><img src="/images/logo-mark.svg" alt="Amieyrul logo" class="size-full"></span><span class="hidden font-display text-sm font-semibold tracking-tight sm:block">Amieyrul<span class="text-primary">.</span></span></a>
         <div class="hidden items-center gap-7 lg:flex"><a href="#about" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">About</a><a href="#skills" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Stack</a><a href="#experience" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Experience</a><a href="#projects" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Projects</a><a href="#contact" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Contact</a></div>
-        <div class="flex items-center gap-2"><a href="./resume.pdf" target="_blank" class="hidden rounded-lg border border-border px-4 py-2 text-xs font-semibold transition hover:border-primary/40 hover:text-primary sm:inline-flex">Resume </a><a href="#contact" class="hidden rounded-lg bg-primary px-4 py-2 text-xs font-bold text-primary-foreground sm:inline-flex">Let's Talk</a><button @click="open=!open" class="rounded-lg border border-border p-2 lg:hidden" aria-label="Toggle menu"><svg x-show="!open" class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg><svg x-show="open" x-cloak class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+        <div class="flex items-center gap-2"><a href="/resume.pdf" target="_blank" class="hidden rounded-lg border border-border px-4 py-2 text-xs font-semibold transition hover:border-primary/40 hover:text-primary sm:inline-flex">Resume </a><a href="#contact" class="hidden rounded-lg bg-primary px-4 py-2 text-xs font-bold text-primary-foreground sm:inline-flex">Let's Talk</a><button @click="open=!open" class="rounded-lg border border-border p-2 lg:hidden" aria-label="Toggle menu"><svg x-show="!open" class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg><svg x-show="open" x-cloak class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     </nav>
-    <div x-show="open" x-cloak class="border-t border-border bg-background/95 px-5 py-4 backdrop-blur-2xl lg:hidden"><div class="mx-auto flex max-w-7xl flex-col gap-1"><a href="#about" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">About</a><a href="#skills" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Stack</a><a href="#experience" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Experience</a><a href="#projects" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Projects</a><a href="#contact" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Contact</a><a href="./resume.pdf" target="_blank" class="mt-2 rounded-lg bg-primary px-3 py-3 text-center text-sm font-bold text-primary-foreground">View Resume</a></div></div>
+    <div x-show="open" x-cloak class="border-t border-border bg-background/95 px-5 py-4 backdrop-blur-2xl lg:hidden"><div class="mx-auto flex max-w-7xl flex-col gap-1"><a href="#about" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">About</a><a href="#skills" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Stack</a><a href="#experience" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Experience</a><a href="#projects" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Projects</a><a href="#contact" @click="open=false" class="rounded-lg px-3 py-3 text-sm text-muted-foreground hover:bg-white/[.03] hover:text-foreground">Contact</a><a href="/resume.pdf" target="_blank" class="mt-2 rounded-lg bg-primary px-3 py-3 text-center text-sm font-bold text-primary-foreground">View Resume</a></div></div>
 </header>
     <main>
         <section id="home" class="relative overflow-hidden pt-28 sm:pt-32">
@@ -36,7 +35,7 @@
             <p class="mt-7 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">I'm <strong class="text-foreground">Mohamad Amirul Helmi</strong>, a Computer Science graduate and Software Engineer focused on web systems, application development, databases, automation and practical problem solving.</p>
             <div class="mt-8 flex flex-wrap gap-3">
                 <a href="#projects" class="btn-primary" data-magnetic>Explore my work <span></span></a>
-                <a href="./resume.pdf" target="_blank" class="btn-secondary">View Resume <span></span></a>
+                <a href="/resume.pdf" target="_blank" class="btn-secondary">View Resume <span></span></a>
             </div>
             <div class="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
                 <div class="metric-card"><span class="number">01</span><strong>Laravel</strong><span>Primary stack</span></div>
@@ -55,7 +54,7 @@
                         <span class="font-mono text-[9px] uppercase tracking-[.2em] text-white/30">profile.preview</span>
                     </div>
                     <div class="relative aspect-[4/5] overflow-hidden">
-                                                    <img src="./images/profile.jpg" alt="Mohamad Amirul Helmi" class="absolute inset-0 h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]">
+                                                    <img src="/images/profile.jpg" alt="Mohamad Amirul Helmi" class="absolute inset-0 h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#080a11] via-transparent to-[#080a11]/10"></div>
                                                 <div class="absolute inset-x-5 bottom-5">
                             <div class="rounded-2xl border border-white/10 bg-black/45 p-4 backdrop-blur-xl">
@@ -284,7 +283,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] md:col-span-2 ring-1 ring-primary/10">
                     <div class="grid lg:grid-cols-[1.15fr_.85fr]">
                         <div class="relative aspect-[16/8] lg:aspect-auto min-h-[20rem] overflow-hidden bg-secondary">
-                                                        <img src="./images/emos.png" alt="Exam Monitoring System (EMOS)" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/emos.png" alt="Exam Monitoring System (EMOS)" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">01</span><span class="tag bg-black/30 text-white/50">PROJECT</span><span class="tag bg-primary/15 text-primary">Featured</span></div>
                         </div>
@@ -297,7 +296,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/candywall.png" alt="Si Manis Rasa — Candy Wall Booking" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/candywall.png" alt="Si Manis Rasa — Candy Wall Booking" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">02</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
@@ -310,7 +309,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/ai-marketing.png" alt="AI Marketing Assistant" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/ai-marketing.png" alt="AI Marketing Assistant" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">03</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
@@ -323,7 +322,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/payung.png" alt="Payung — Insurance &amp; Takaful Agent Management System" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/payung.png" alt="Payung — Insurance &amp; Takaful Agent Management System" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">04</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
@@ -336,7 +335,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/lap.png" alt="Contractor Management System — Lembaga Air Perak" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/lap.png" alt="Contractor Management System — Lembaga Air Perak" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">05</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
@@ -349,7 +348,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/tadika.png" alt="Tadika Alumni Application" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/tadika.png" alt="Tadika Alumni Application" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">06</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
@@ -362,7 +361,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/attendance.png" alt="Smart Attendance System using Fingerprint Recognition" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/attendance.png" alt="Smart Attendance System using Fingerprint Recognition" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">07</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
@@ -375,7 +374,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/train-booking.png" alt="Train Booking System — Flutter" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/train-booking.png" alt="Train Booking System — Flutter" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">08</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
@@ -388,7 +387,7 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="./images/wattwizard.png" alt="WattWizard — Electricity Bill Estimator" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='./images/project-placeholder.svg'">
+                                                        <img src="/images/wattwizard.png" alt="WattWizard — Electricity Bill Estimator" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">09</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
