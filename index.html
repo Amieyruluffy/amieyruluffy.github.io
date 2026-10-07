@@ -3,227 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="8TAeP9jNLY0CshUJYpXT3K3a1GLnnEbz5u731oFL">
+    <meta name="csrf-token" content="">
     <title>Mohamad Amirul Helmi — Software Engineer</title>
     <meta name="description" content="Portfolio of Mohamad Amirul Helmi — Software Engineer, web developer and Computer Science graduate.">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|space-grotesk:400,500,600,700|jetbrains-mono:400,500,600&display=swap" rel="stylesheet">
-    <link rel="preload" as="style" href="/build/assets/app-EOyt6QWm.css" /><link rel="modulepreload" as="script" href="/build/assets/app-C332j3Re.js" /><link rel="stylesheet" href="/build/assets/app-EOyt6QWm.css" /><script type="module" src="/build/assets/app-C332j3Re.js"></script><script id="browser-logger-active">
-(function() {
-    const ENDPOINT = '/_boost/browser-logs';
-    const logQueue = [];
-    let flushTimeout = null;
-    const captureTypes = ["error","warning","info","log","debug","table"];
-
-    console.log('🔍 Browser logger active (MCP server detected). Posting to: ' + ENDPOINT);
-
-    // Store original console methods
-    const originalConsole = {
-        log: console.log,
-        debug: console.debug,
-        info: console.info,
-        error: console.error,
-        warn: console.warn,
-        table: console.table
-    };
-
-    // Helper to safely stringify values
-    function safeStringify(obj) {
-        const seen = new WeakSet();
-        return JSON.stringify(obj, (key, value) => {
-            if (typeof value === 'object' && value !== null) {
-                if (seen.has(value)) return '[Circular]';
-                seen.add(value);
-            }
-            if (value instanceof Error) {
-                return {
-                    name: value.name,
-                    message: value.message,
-                    stack: value.stack
-                };
-            }
-            return value;
-        });
-    }
-
-    // Normalize log type for consistency (e.g., 'warn' to 'warning')
-    function normalizeType(type) {
-        return type === 'warn' ? 'warning' : type;
-    }
-
-    // Determine if a log type should be captured based on configured levels
-    function shouldCapture(type) {
-        return captureTypes.includes(normalizeType(type));
-    }
-
-    // Batch and send logs
-    function flushLogs() {
-        if (logQueue.length === 0) return;
-
-        const batch = logQueue.splice(0, logQueue.length);
-
-        fetch(ENDPOINT, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: JSON.stringify({ logs: batch })
-        }).catch(err => {
-            // Silently fail to avoid infinite loops
-            originalConsole.error('Failed to send logs:', err);
-        });
-    }
-
-    // Debounced flush (100ms)
-    function scheduleFlush() {
-        if (flushTimeout) clearTimeout(flushTimeout);
-        flushTimeout = setTimeout(flushLogs, 100);
-    }
-
-    // Intercept console methods
-    ['log', 'debug', 'info', 'error', 'warn', 'table'].forEach(method => {
-        console[method] = function(...args) {
-            // Call original method
-            originalConsole[method].apply(console, args);
-
-            // Capture log data
-            try {
-                if (!shouldCapture(method)) {
-                    return;
-                }
-
-                logQueue.push({
-                    type: method,
-                    timestamp: new Date().toISOString(),
-                    data: args.map(arg => {
-                        try {
-                            return typeof arg === 'object' ? JSON.parse(safeStringify(arg)) : arg;
-                        } catch (e) {
-                            return String(arg);
-                        }
-                    }),
-                    url: window.location.href,
-                    userAgent: navigator.userAgent
-                });
-
-                scheduleFlush();
-            } catch (e) {
-                // Fail silently
-            }
-        };
-    });
-
-    // Global error handlers for uncaught errors
-    const originalOnError = window.onerror;
-    window.onerror = function boostErrorHandler(errorMsg, url, lineNumber, colNumber, error) {
-        try {
-            if (shouldCapture('error')) {
-                logQueue.push({
-                    type: 'uncaught_error',
-                    timestamp: new Date().toISOString(),
-                    data: [{
-                        message: errorMsg,
-                        filename: url,
-                        lineno: lineNumber,
-                        colno: colNumber,
-                        error: error ? {
-                            name: error.name,
-                            message: error.message,
-                            stack: error.stack
-                        } : null
-                    }],
-                    url: window.location.href,
-                    userAgent: navigator.userAgent
-                });
-
-                scheduleFlush();
-            }
-
-        } catch (e) {
-            // Fail silently
-        }
-
-        // Call original handler if it exists
-        if (originalOnError && typeof originalOnError === 'function') {
-            return originalOnError(errorMsg, url, lineNumber, colNumber, error);
-        }
-
-        // Let the error continue to propagate
-        return false;
-    }
-    window.addEventListener('error', (event) => {
-        try {
-            if (!shouldCapture('error')) {
-                return false;
-            }
-
-            logQueue.push({
-                type: 'window_error',
-                timestamp: new Date().toISOString(),
-                data: [{
-                    message: event.message,
-                    filename: event.filename,
-                    lineno: event.lineno,
-                    colno: event.colno,
-                    error: event.error ? {
-                        name: event.error.name,
-                        message: event.error.message,
-                        stack: event.error.stack
-                    } : null
-                }],
-                url: window.location.href,
-                userAgent: navigator.userAgent
-            });
-
-            scheduleFlush();
-        } catch (e) {
-            // Fail silently
-        }
-
-        // Let the error continue to propagate
-        return false;
-    });
-    window.addEventListener('unhandledrejection', (event) => {
-        try {
-            if (!shouldCapture('error')) {
-                return false;
-            }
-
-            logQueue.push({
-                type: 'error',
-                timestamp: new Date().toISOString(),
-                data: [{
-                    message: 'Unhandled Promise Rejection',
-                    reason: event.reason instanceof Error ? {
-                        name: event.reason.name,
-                        message: event.reason.message,
-                        stack: event.reason.stack
-                    } : event.reason
-                }],
-                url: window.location.href,
-                userAgent: navigator.userAgent
-            });
-
-            scheduleFlush();
-        } catch (e) {
-            // Fail silently
-        }
-
-        // Let the rejection continue to propagate
-        return false;
-    });
-
-    // Flush on page unload
-    window.addEventListener('beforeunload', () => {
-        if (logQueue.length > 0) {
-            navigator.sendBeacon(ENDPOINT, JSON.stringify({ logs: logQueue }));
-        }
-    });
-})();
-</script>
-</head>
+    <link rel="preload" as="style" href="/build/assets/app-DWjV3hGD.css" /><link rel="modulepreload" as="script" href="/build/assets/app-C332j3Re.js" /><link rel="stylesheet" href="/build/assets/app-DWjV3hGD.css" /><script type="module" src="/build/assets/app-C332j3Re.js"></script></head>
 <body>
     <div class="site-grid pointer-events-none fixed inset-0 z-[-1] opacity-70"></div>
     <div class="pointer-events-none fixed left-1/2 top-0 z-[-1] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]"></div>
@@ -510,9 +296,22 @@
                             <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
                     <div class="grid ">
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
-                                                        <img src="/images/ai-marketing.png" alt="AI Marketing Assistant" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                                                        <img src="/images/candywall.png" alt="Si Manis Rasa — Candy Wall Booking" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
                             <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">02</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                        </div>
+                        <div class="flex flex-col justify-between p-6 sm:p-8">
+                            <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Si Manis Rasa — Candy Wall Booking</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">An online candy wall booking website for weddings, birthdays, engagements and corporate events. Customers can explore packages, check date availability and reserve their event online, with payment arrangements through WhatsApp.</p></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Online Booking</span><span class="tag">WhatsApp</span><span class="tag">Render</span></div><div class="mt-6 flex flex-wrap gap-3"><a href="https://candywall-booking.onrender.com/" target="_blank" rel="noreferrer" class="text-xs font-semibold text-primary hover:underline">Live demo &#8599;</a> </div></div>
+                        </div>
+                    </div>
+                </article>
+                            <article class="project-card group glass glass-hover overflow-hidden rounded-[1.75rem] ">
+                    <div class="grid ">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
+                                                        <img src="/images/ai-marketing.png" alt="AI Marketing Assistant" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">03</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">AI Marketing Assistant</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">An AI-powered marketing workspace for managing product information, campaigns, AI-generated content and marketing workflows in one platform.</p></div>
@@ -525,11 +324,11 @@
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
                                                         <img src="/images/payung.png" alt="Payung — Insurance &amp; Takaful Agent Management System" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
-                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">03</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">04</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Payung — Insurance &amp; Takaful Agent Management System</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">A web-based system for managing insurance and takaful agents, built to support agent administration and operational workflows.</p></div>
-                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">MySQL</span></div><div class="mt-6 flex flex-wrap gap-3"><a href="http://payung.test/" target="_blank" rel="noreferrer" class="text-xs font-semibold text-primary hover:underline">Open system ↗</a> </div></div>
+                            <div class="mt-7"><div class="flex flex-wrap gap-2"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">MySQL</span></div><div class="mt-6 flex flex-wrap gap-3"><a href="http://payung.test/" target="_blank" rel="noreferrer" class="text-xs font-semibold text-primary hover:underline">Live demo &#8599;</a> </div></div>
                         </div>
                     </div>
                 </article>
@@ -538,7 +337,7 @@
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
                                                         <img src="/images/lap.png" alt="Contractor Management System — Lembaga Air Perak" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
-                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">04</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">05</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Contractor Management System — Lembaga Air Perak</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Web-based contractor management system supporting contractor registration, project monitoring and contract management processes.</p></div>
@@ -551,7 +350,7 @@
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
                                                         <img src="/images/tadika.png" alt="Tadika Alumni Application" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
-                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">05</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">06</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Tadika Alumni Application</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Flutter-based mobile application for alumni information management, enhanced with new features and tested for application reliability.</p></div>
@@ -564,7 +363,7 @@
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
                                                         <img src="/images/attendance.png" alt="Smart Attendance System using Fingerprint Recognition" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
-                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">06</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">07</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Smart Attendance System using Fingerprint Recognition</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Final Year Project: a web-based student attendance system using Arduino and biometric fingerprint authentication with MySQL attendance records.</p></div>
@@ -577,7 +376,7 @@
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
                                                         <img src="/images/train-booking.png" alt="Train Booking System — Flutter" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
-                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">07</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">08</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">Train Booking System — Flutter</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">A Flutter mobile application for train ticket booking and reservation with user registration, train search, seat booking and booking history.</p></div>
@@ -590,7 +389,7 @@
                         <div class="relative aspect-[16/9] overflow-hidden bg-secondary">
                                                         <img src="/images/wattwizard.png" alt="WattWizard — Electricity Bill Estimator" class="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100" onerror="this.src='/images/project-placeholder.svg'">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#070914] via-transparent to-transparent"></div>
-                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">08</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
+                            <div class="absolute left-5 top-5 flex items-center gap-2"><span class="tag bg-black/30 text-white/70">09</span><span class="tag bg-black/30 text-white/50">PROJECT</span></div>
                         </div>
                         <div class="flex flex-col justify-between p-6 sm:p-8">
                             <div><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-bold leading-tight sm:text-2xl">WattWizard — Electricity Bill Estimator</h3><span class="text-xl text-white/20 transition group-hover:text-primary">↗</span></div><p class="mt-4 text-sm leading-7 text-muted-foreground">Android application that estimates electricity bills from energy usage and rebate percentage, applying different rates across usage blocks.</p></div>
