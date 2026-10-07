@@ -30,7 +30,7 @@
             <label class="form-label mb-2 block">Project Cover Image</label>
             @if($project->image)
             <div class="mb-4">
-                <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" class="w-36 h-36 object-cover rounded-2xl border border-primary/30 shadow-lg">
+                <img src="{{ asset(str_starts_with($project->image, 'images/') ? $project->image : 'storage/'.$project->image) }}" alt="{{ $project->title }}" class="w-36 h-36 object-cover rounded-2xl border border-primary/30 shadow-lg">
             </div>
             @endif
             <input type="file" name="image" accept="image/*"
@@ -65,11 +65,11 @@
 
         <div class="flex items-center space-x-6 pt-2">
             <div class="flex items-center space-x-3">
-                <input type="checkbox" name="is_featured" value="1" {{ old('is_featured', $project->is_featured) ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
-                <label class="text-sm font-medium">Featured Project</label>
+                <input type="hidden" name="is_featured" value="0"><input type="checkbox" name="is_featured" value="1" {{ old('is_featured', $project->is_featured) ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
+                <label class="text-sm font-medium">Show in Selected Work</label>
             </div>
             <div class="flex items-center space-x-3">
-                <input type="checkbox" name="is_active" value="1" {{ old('is_active', $project->is_active) ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
+                <input type="hidden" name="is_active" value="0"><input type="checkbox" name="is_active" value="1" {{ old('is_active', $project->is_active) ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
                 <label class="text-sm font-medium">Active (Visible)</label>
             </div>
         </div>

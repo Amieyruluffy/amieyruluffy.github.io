@@ -4,7 +4,7 @@
 <div class="max-w-3xl mx-auto space-y-8">
     <div>
         <h1 class="text-3xl lg:text-4xl font-display font-bold">Resume</h1>
-        <p class="text-muted-foreground mt-2">Upload a PDF resume. This replaces <code class="text-primary">public/resume.pdf</code> used by the navbar download button.</p>
+        <p class="text-muted-foreground mt-2">Upload your latest PDF. Visitors can open it using View Resume on your portfolio.</p>
     </div>
 
     <div class="glass-card p-6 lg:p-8 rounded-3xl space-y-6">

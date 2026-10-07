@@ -1,19 +1,20 @@
 <?php
 
-test('registration screen can be rendered', function () {
+test('public registration screen is unavailable', function () {
     $response = $this->get('/register');
 
-    $response->assertStatus(200);
+    $response->assertNotFound();
 });
 
-test('new users can register', function () {
+test('visitors cannot create admin accounts', function () {
     $response = $this->post('/register', [
-        'name' => 'Test User',
-        'email' => 'test@example.com',
-        'password' => 'password',
-        'password_confirmation' => 'password',
+        'name' => 'Amieyrul',
+        'email' => 'aamieyruljr@gmail.com',
+        'password' => '010921',
+        'password_confirmation' => '010921',
     ]);
 
-    $this->assertAuthenticated();
-    $response->assertRedirect(route('admin.dashboard', absolute: false));
+    $this->assertGuest();
+    $response->assertNotFound();
+    $this->assertDatabaseMissing('users', ['email' => 'aamieyruljr@gmail.com']);
 });

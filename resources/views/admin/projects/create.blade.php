@@ -54,16 +54,17 @@
 
         <div>
             <label class="form-label">Sort Order</label>
-            <input type="number" name="sort_order" value="{{ old('sort_order', 0) }}" min="0" class="form-input">
+            <input type="number" name="sort_order" value="{{ old('sort_order') }}" min="0" class="form-input">
+            <p class="mt-2 text-xs text-muted-foreground">Leave empty to add this project last. Smaller numbers appear first.</p>
         </div>
 
         <div class="flex items-center space-x-6 pt-2">
             <div class="flex items-center space-x-3">
-                <input type="checkbox" name="is_featured" value="1" {{ old('is_featured') ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
-                <label class="text-sm font-medium">Featured Project</label>
+                <input type="hidden" name="is_featured" value="0"><input type="checkbox" name="is_featured" value="1" {{ old('is_featured', true) ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
+                <label class="text-sm font-medium">Show in Selected Work</label>
             </div>
             <div class="flex items-center space-x-3">
-                <input type="checkbox" name="is_active" value="1" {{ old('is_active', true) ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
+                <input type="hidden" name="is_active" value="0"><input type="checkbox" name="is_active" value="1" {{ old('is_active', true) ? 'checked' : '' }} class="w-4 h-4 accent-primary rounded cursor-pointer">
                 <label class="text-sm font-medium">Active (Visible)</label>
             </div>
         </div>

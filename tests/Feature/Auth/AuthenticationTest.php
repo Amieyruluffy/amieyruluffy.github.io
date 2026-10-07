@@ -6,6 +6,9 @@ test('login screen can be rendered', function () {
     $response = $this->get('/login');
 
     $response->assertStatus(200);
+    $response->assertSee('Amieyrul');
+    $response->assertSee('Keep your work');
+    $response->assertDontSee('Create Account');
 });
 
 test('users can authenticate using the login screen', function () {

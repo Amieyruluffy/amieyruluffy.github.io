@@ -21,7 +21,7 @@
             <div>
                 <div class="h-44 bg-card/60 relative overflow-hidden flex items-center justify-center border-b border-border">
                     @if($project->image)
-                    <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="{{ asset(str_starts_with($project->image, 'images/') ? $project->image : 'storage/'.$project->image) }}" alt="{{ $project->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     @else
                     <span class="text-4xl font-display font-bold text-primary/20">{{ strtoupper(substr($project->title, 0, 2)) }}</span>
                     @endif

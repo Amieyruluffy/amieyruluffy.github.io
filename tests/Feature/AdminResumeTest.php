@@ -4,6 +4,18 @@ use App\Models\User;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\File;
 
+beforeEach(function () {
+    $this->originalResume = File::exists(public_path('resume.pdf')) ? File::get(public_path('resume.pdf')) : null;
+});
+
+afterEach(function () {
+    if ($this->originalResume !== null) {
+        File::put(public_path('resume.pdf'), $this->originalResume);
+    } else {
+        File::delete(public_path('resume.pdf'));
+    }
+});
+
 test('guests cannot access the resume admin page', function () {
     $this->get(route('admin.resume.edit'))->assertRedirect(route('login'));
 });

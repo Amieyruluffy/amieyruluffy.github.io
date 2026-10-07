@@ -22,6 +22,10 @@
 }
 
 @layer components {
+    .glass-card { @apply rounded-2xl border border-border bg-card/70 backdrop-blur-xl; }
+    .form-label { @apply mb-2 block text-sm font-semibold text-foreground; }
+    .form-input { @apply block w-full rounded-xl border border-input bg-background/70 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary; color-scheme: dark; }
+    .btn-outline { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:bg-primary/10; }
     .site-grid {
         background-image: linear-gradient(rgba(255,255,255,.032) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px);
         background-size: 42px 42px;

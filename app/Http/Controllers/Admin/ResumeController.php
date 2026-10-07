@@ -33,6 +33,6 @@ class ResumeController extends Controller
 
         return redirect()
             ->route('admin.resume.edit')
-            ->with('success', 'Resume updated successfully! Run php artisan export before deploying to GitHub Pages.');
+            ->with('success', 'Resume updated successfully. Your portfolio now uses the latest PDF.');
     }
 }

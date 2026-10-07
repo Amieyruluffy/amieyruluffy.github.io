@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="mb-6 text-center">
-        <h1 class="text-2xl font-display font-bold text-foreground">Welcome Back</h1>
+        <h1 class="text-2xl font-display font-bold text-foreground">Sign in to your workspace</h1>
         <p class="text-xs text-muted-foreground mt-1.5">Enter your credentials to access the admin dashboard.</p>
     </div>
 
@@ -43,7 +43,7 @@
 
         <!-- Submit Button -->
         <div class="pt-2">
-            <button type="submit" class="w-full btn-primary justify-center py-3.5 font-bold shadow-[0_0_20px_-3px_rgba(94,236,200,0.4)]">
+            <button type="submit" class="w-full btn-primary justify-center py-3.5 font-bold shadow-[0_0_20px_-3px_rgba(155,124,255,0.4)]">
                 <span>Sign In to Admin</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
