@@ -7,6 +7,18 @@
         <p class="text-muted-foreground mt-2">Customize your bio, statistics, expertise level, and about profile image.</p>
     </div>
 
+    <form action="{{ route('admin.profile-picture.update') }}" method="POST" enctype="multipart/form-data" class="glass-card rounded-3xl p-6 lg:p-8 space-y-4">
+        @csrf
+        @method('PUT')
+        <h2 class="text-lg font-semibold">Profile picture / Logo</h2>
+        <x-profile-picture class="h-16 w-16" />
+        <div>
+            <label for="avatar" class="form-label">New profile picture (PNG, up to 5 MB)</label>
+            <input id="avatar" type="file" name="avatar" accept="image/png" required class="form-input">
+        </div>
+        <button type="submit" class="btn-primary">Update profile picture</button>
+    </form>
+
     <form action="{{ route('admin.about.update') }}" method="POST" enctype="multipart/form-data" class="glass-card p-6 lg:p-8 rounded-3xl space-y-6">
         @csrf
         @method('PUT')

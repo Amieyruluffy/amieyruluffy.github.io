@@ -102,3 +102,33 @@ test('dashboard and project forms use the portfolio workspace', function () {
     $this->get(route('admin.dashboard'))->assertSuccessful()->assertSee('amieyrul')->assertSee('Add a new project')->assertSee('Update your resume');
     $this->get(route('admin.projects.create'))->assertSuccessful()->assertSee('Add Project');
 });
+
+test('portfolio admin and login use the supplied profile picture as their logo', function () {
+    expect(file_exists(public_path('images/avatar.png')))->toBeTrue();
+
+    Storage::fake('public');
+    $this->get('/')->assertSuccessful()->assertSee('images/avatar.png', false)
+        ->assertSee('View profile picture')->assertSee('showModal()', false)
+        ->assertSee('Close profile picture')->assertSee('w-[18rem]', false);
+    $this->get(route('login'))->assertSuccessful()->assertSee('images/avatar.png', false);
+    $this->actingAs(User::factory()->create())->get(route('admin.projects.index'))
+        ->assertSuccessful()->assertSee('images/avatar.png', false);
+});
+
+test('admin can replace the profile picture and visitors see the uploaded image', function () {
+    Storage::fake('public');
+    $image = UploadedFile::fake()->createWithContent('avatar.png', base64_decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a7ioAAAAASUVORK5CYII='));
+    $this->actingAs(User::factory()->create())->put(route('admin.profile-picture.update'), ['avatar' => $image])
+        ->assertSessionHasNoErrors()->assertRedirect(route('admin.about.edit'));
+    Storage::disk('public')->assertExists('branding/avatar.png');
+    $this->get('/')->assertSuccessful()->assertSee('storage/branding/avatar.png', false);
+});
+
+test('profile picture updates require authentication and a valid png', function () {
+    Storage::fake('public');
+    $this->put(route('admin.profile-picture.update'))->assertRedirect(route('login'));
+    $this->actingAs(User::factory()->create())->put(route('admin.profile-picture.update'), [
+        'avatar' => UploadedFile::fake()->create('avatar.txt', 1, 'text/plain'),
+    ])->assertSessionHasErrors('avatar');
+    Storage::disk('public')->assertMissing('branding/avatar.png');
+});

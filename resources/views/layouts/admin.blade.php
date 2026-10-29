@@ -29,10 +29,12 @@
     <div class="min-h-screen lg:grid lg:grid-cols-[16rem_1fr]">
         <aside class="border-r border-border bg-card/70 p-5 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
             <div class="flex items-center justify-between gap-3">
-                <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3">
-                    <img src="{{ asset('images/logo-mark.svg') }}" alt="Amieyrul" class="h-11 w-11 rounded-xl">
+                <div class="flex items-center gap-3">
+                    <x-profile-picture class="h-11 w-11" />
+                    <a href="{{ route('admin.dashboard') }}">
                     <span class="font-display text-lg font-bold">amieyrul<span class="text-primary">.</span><span class="block text-xs font-normal text-muted-foreground">Portfolio workspace</span></span>
-                </a>
+                    </a>
+                </div>
                 <button type="button" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-controls="admin-navigation" class="btn-outline px-3 py-2 lg:hidden">Menu</button>
             </div>
             <nav id="admin-navigation" :class="menuOpen ? 'block' : 'hidden'" class="mt-8 space-y-1 lg:!block" aria-label="Admin navigation">

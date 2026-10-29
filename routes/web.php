@@ -30,6 +30,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // About Section
     Route::get('/about', [AboutController::class, 'edit'])->name('about.edit');
     Route::put('/about', [AboutController::class, 'update'])->name('about.update');
+    Route::put('/profile-picture', [AboutController::class, 'updateProfilePicture'])->name('profile-picture.update');
 
     // Resume
     Route::get('/resume', [ResumeController::class, 'edit'])->name('resume.edit');

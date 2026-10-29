@@ -4,10 +4,22 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutContent;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
+    public function updateProfilePicture(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'avatar' => ['required', 'image', 'mimes:png', 'max:5120'],
+        ]);
+
+        $request->file('avatar')->storeAs('branding', 'avatar.png', 'public');
+
+        return redirect()->route('admin.about.edit')->with('success', 'Profile picture updated. Export and deploy again to update static hosting.');
+    }
+
     public function edit()
     {
         $about = AboutContent::firstOrCreate([], [

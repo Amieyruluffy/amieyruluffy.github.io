@@ -3,20 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="LyzUXNGXpH3etJARSEnftVo3ajMWZ5PxH7wiaEZs">
+    <meta name="csrf-token" content="zFpwSIDEbT4xyLqNNz9ZVJ71w5K3fRkfLa9Jey8v">
     <title>Mohamad Amirul Helmi — Software Engineer</title>
     <meta name="description" content="Portfolio of Mohamad Amirul Helmi — Software Engineer, web developer and Computer Science graduate.">
     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|space-grotesk:400,500,600,700|jetbrains-mono:400,500,600&display=swap" rel="stylesheet">
-    <link rel="preload" as="style" href="./build/assets/app-DWjV3hGD.css" /><link rel="modulepreload" as="script" href="./build/assets/app-C332j3Re.js" /><link rel="stylesheet" href="./build/assets/app-DWjV3hGD.css" /><script type="module" src="./build/assets/app-C332j3Re.js"></script>
+    <link rel="preload" as="style" href="./build/assets/app-Dvgoan_y.css" /><link rel="modulepreload" as="script" href="./build/assets/app-C332j3Re.js" /><link rel="stylesheet" href="./build/assets/app-Dvgoan_y.css" /><script type="module" src="./build/assets/app-C332j3Re.js"></script>
 </head>
 <body>
     <div class="site-grid pointer-events-none fixed inset-0 z-[-1] opacity-70"></div>
     <div class="pointer-events-none fixed left-1/2 top-0 z-[-1] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]"></div>
         <header x-data="{scrolled:false,open:false}" @scroll.window="scrolled=window.scrollY>24" :class="scrolled ? 'border-b border-border bg-background/85 backdrop-blur-2xl shadow-[0_10px_40px_-30px_rgba(0,0,0,.8)]' : ''" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#home" class="group flex items-center gap-3"><span class="grid size-10 place-items-center rounded-xl border border-primary/25 bg-primary/[.04] p-1.5 shadow-[0_0_28px_-12px_rgba(155,124,255,.9)]"><img src="./images/logo-mark.svg" alt="Amieyrul logo" class="size-full"></span><span class="hidden font-display text-sm font-semibold tracking-tight sm:block">Amieyrul<span class="text-primary">.</span></span></a>
+        <div class="flex items-center gap-3"><span class="inline-flex">
+    <button type="button" class="overflow-hidden rounded-full border border-primary/25 size-10" aria-label="View profile picture" onclick="this.nextElementSibling.showModal()">
+        <img src="./images/avatar.png" alt="Amirul Helmi" class="h-full w-full rounded-full object-cover">
+    </button>
+    <dialog aria-label="Amirul Helmi profile picture" class="m-auto w-[18rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-primary/25 bg-background p-4 text-foreground shadow-xl backdrop:bg-black/60" onclick="if (event.target === this) this.close()">
+        <div class="mb-3 flex items-center justify-between gap-3">
+            <span class="text-sm font-semibold">Amirul Helmi</span>
+            <button type="button" autofocus aria-label="Close profile picture" class="rounded-lg px-2 py-1 text-lg" onclick="this.closest('dialog').close()">&times;</button>
+        </div>
+        <img src="./images/avatar.png" alt="Amirul Helmi profile picture" class="aspect-square w-full rounded-xl object-cover">
+    </dialog>
+</span>
+<a href="#home" class="hidden font-display text-sm font-semibold tracking-tight sm:block">Amieyrul<span class="text-primary">.</span></a></div>
         <div class="hidden items-center gap-7 lg:flex"><a href="#about" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">About</a><a href="#skills" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Stack</a><a href="#experience" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Experience</a><a href="#projects" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Projects</a><a href="#contact" class="text-xs font-medium text-muted-foreground transition hover:text-foreground">Contact</a></div>
         <div class="flex items-center gap-2"><a href="./resume.pdf" target="_blank" class="hidden rounded-lg border border-border px-4 py-2 text-xs font-semibold transition hover:border-primary/40 hover:text-primary sm:inline-flex">Resume </a><a href="#contact" class="hidden rounded-lg bg-primary px-4 py-2 text-xs font-bold text-primary-foreground sm:inline-flex">Let's Talk</a><button @click="open=!open" class="rounded-lg border border-border p-2 lg:hidden" aria-label="Toggle menu"><svg x-show="!open" class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg><svg x-show="open" x-cloak class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     </nav>

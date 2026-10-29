@@ -13,7 +13,7 @@
 <body class="flex min-h-screen items-center justify-center px-5 py-12">
     <main class="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-border bg-card/60 shadow-violet lg:grid lg:grid-cols-2">
         <section class="relative hidden flex-col justify-between border-r border-border bg-primary/5 p-12 lg:flex">
-            <a href="{{ route('portfolio.index') }}" class="flex items-center gap-3"><img src="{{ asset('images/logo-mark.svg') }}" alt="" class="h-12 w-12"><span class="font-display text-2xl font-bold">amieyrul<span class="text-primary">.</span></span></a>
+            <div class="flex items-center gap-3"><x-profile-picture class="h-12 w-12" /><a href="{{ route('portfolio.index') }}" class="font-display text-2xl font-bold">amieyrul<span class="text-primary">.</span></a></div>
             <div class="py-16"><span class="eyebrow">Your portfolio, your workspace</span><h2 class="mt-6 text-5xl font-bold leading-tight">Keep your work<br><span class="text-gradient">up to date.</span></h2><p class="mt-6 max-w-sm text-sm leading-7 text-muted-foreground">Add your latest projects, share what you have built and keep your resume ready for the next opportunity.</p></div>
             <p class="font-mono text-xs text-muted-foreground">Mohamad Amirul Helmi / Portfolio Admin</p>
         </section>
