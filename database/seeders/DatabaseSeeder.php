@@ -191,6 +191,7 @@ class DatabaseSeeder extends Seeder
         }
 
         $this->call(CandyWallProjectSeeder::class);
+        $this->call(RecentProjectsSeeder::class);
 
         foreach ([
             ['title' => 'Web Application Development', 'icon' => 'code', 'description' => 'Building responsive web applications with Laravel, PHP, JavaScript, HTML and CSS.', 'sort_order' => 1],

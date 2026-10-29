@@ -30,7 +30,7 @@ class ExperienceController extends Controller
             'start_date' => 'required|date',
             'end_date' => 'nullable|date',
             'is_current' => 'boolean',
-            'type' => 'required|in:job,internship',
+            'type' => 'required|in:job,internship,freelance,earlier',
             'sort_order' => 'nullable|integer|min:0',
         ]);
 
@@ -56,7 +56,7 @@ class ExperienceController extends Controller
             'start_date' => 'required|date',
             'end_date' => 'nullable|date',
             'is_current' => 'boolean',
-            'type' => 'required|in:job,internship',
+            'type' => 'required|in:job,internship,freelance,earlier',
             'sort_order' => 'nullable|integer|min:0',
         ]);
 

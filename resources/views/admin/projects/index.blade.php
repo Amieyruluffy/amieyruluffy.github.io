@@ -15,6 +15,8 @@
         </a>
     </div>
 
+    <p class="text-sm text-muted-foreground">Choose a position and click Move to reorder a project. Position 1 appears first and uses the large featured card. Only active, featured projects appear on the portfolio. Export and deploy again to update static hosting.</p>
+
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach($projects as $project)
         <div class="glass-card rounded-3xl overflow-hidden group flex flex-col justify-between">
@@ -31,6 +33,17 @@
                 </div>
 
                 <div class="p-6">
+                    <form action="{{ route('admin.projects.position', $project) }}" method="POST" class="mb-5 flex items-center gap-2">
+                        @csrf
+                        @method('PATCH')
+                        <label for="position-{{ $project->id }}" class="text-xs text-muted-foreground">Position</label>
+                        <select id="position-{{ $project->id }}" name="position" class="form-input w-20 py-2" aria-label="Position for {{ $project->title }}">
+                            @for($position = 1; $position <= $projects->count(); $position++)
+                                <option value="{{ $position }}" @selected($position === $loop->iteration)>{{ $position }}</option>
+                            @endfor
+                        </select>
+                        <button type="submit" class="btn-outline px-3 py-2 text-xs">Move</button>
+                    </form>
                     <h3 class="text-lg font-display font-bold text-foreground mb-2">{{ $project->title }}</h3>
                     <p class="text-muted-foreground text-sm mb-4 line-clamp-2">{{ Str::limit($project->description, 100) }}</p>
                     

@@ -39,6 +39,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('skills', SkillController::class);
 
     // Projects
+    Route::patch('/projects/{project}/position', [ProjectController::class, 'position'])->name('projects.position');
     Route::resource('projects', ProjectController::class);
 
     // Experiences

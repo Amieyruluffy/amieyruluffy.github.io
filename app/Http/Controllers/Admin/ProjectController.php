@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 
@@ -13,7 +14,7 @@ class ProjectController extends Controller
 {
     public function index(): View
     {
-        $projects = Project::orderBy('sort_order')->get();
+        $projects = Project::orderBy('sort_order')->orderBy('id')->get();
 
         return view('admin.projects.index', compact('projects'));
     }
@@ -21,6 +22,27 @@ class ProjectController extends Controller
     public function create(): View
     {
         return view('admin.projects.create');
+    }
+
+    public function position(Request $request, Project $project): RedirectResponse
+    {
+        $validated = $request->validate([
+            'position' => ['required', 'integer', 'min:1', 'max:'.Project::count()],
+        ]);
+
+        DB::transaction(function () use ($project, $validated): void {
+            $projectIds = Project::orderBy('sort_order')->orderBy('id')
+                ->lockForUpdate()->pluck('id')->reject(fn (int $id): bool => $id === $project->id)
+                ->values()->all();
+
+            array_splice($projectIds, (int) $validated['position'] - 1, 0, [$project->id]);
+
+            foreach ($projectIds as $index => $projectId) {
+                Project::whereKey($projectId)->update(['sort_order' => $index + 1]);
+            }
+        });
+
+        return redirect()->route('admin.projects.index')->with('success', 'Project order saved. Export and deploy again to update static hosting.');
     }
 
     public function store(Request $request): RedirectResponse

@@ -42,7 +42,7 @@
                                 <h4 class="mt-2 text-base font-semibold text-foreground">{{ $experience->title }}</h4>
                                 <p class="mt-1 text-xs text-muted-foreground">{{ $experience->company }}</p>
                             </div>
-                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">{{ $experience->start_date?->format('Y') }}{{ $experience->end_date ? ' — '.$experience->end_date->format('Y') : '' }}</span>
+                            <span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">{{ $experience->start_date?->format('Y') }}{{ $experience->is_current ? ' — Present' : ($experience->end_date ? ' — '.$experience->end_date->format('Y') : '') }}</span>
                         </div>
                         @if($experience->responsibilities)
                             <ul class="mt-4 space-y-2 text-xs leading-5 text-muted-foreground">

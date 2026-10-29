@@ -19,7 +19,7 @@ class PortfolioController extends Controller
     {
         $skills = Skill::active()->orderBy('sort_order')->get()->groupBy('category');
         $experiences = Experience::orderBy('start_date', 'desc')->get();
-        $projects = Project::active()->featured()->orderBy('sort_order')->get();
+        $projects = Project::active()->featured()->orderBy('sort_order')->orderBy('id')->get();
         $services = Service::active()->orderBy('sort_order')->get();
         $testimonials = Testimonial::active()->orderBy('sort_order')->get();
         $contactInfo = ContactInformation::first();

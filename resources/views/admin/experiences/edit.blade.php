@@ -26,6 +26,8 @@
             <select name="type" required class="form-input">
                 <option value="job" {{ old('type', $experience->type) == 'job' ? 'selected' : '' }}>Job</option>
                 <option value="internship" {{ old('type', $experience->type) == 'internship' ? 'selected' : '' }}>Internship</option>
+                <option value="freelance" {{ old('type', $experience->type) == 'freelance' ? 'selected' : '' }}>Freelance</option>
+                <option value="earlier" {{ old('type', $experience->type) == 'earlier' ? 'selected' : '' }}>Part-time / Earlier Experience</option>
             </select>
         </div>
 
